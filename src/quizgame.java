@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class quizgame {
-	
+
 	public static void main(String[] args) {
 		int score=0;
 		Scanner scan = new Scanner(System.in);
@@ -29,6 +29,6 @@ public class quizgame {
 		if (score == 4 && question5.equalsIgnoreCase("Yes")) {System.out.println("Thank you for being honest.");}
 		else if(score < 4 && question5.equalsIgnoreCase("No")) {System.out.println("Thank you for being honest.");}
 		else {System.out.print("Liar!");}
-		}
 	}
+}
 

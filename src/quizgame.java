@@ -27,7 +27,7 @@ public class quizgame {
 		System.out.println("Question 5: Did you get 100% on this quiz");
 		String question5 = scan.next();
 		if (score == 4 && question5.equalsIgnoreCase("Yes")) {System.out.println("Thank you for being honest.");}
-		else if(score < 4) {System.out.println("Thank you for being honest.");}
+		else if(score < 4 && question5.equalsIgnoreCase("No")) {System.out.println("Thank you for being honest.");}
 		else {System.out.print("Liar!");}
 		}
 	}

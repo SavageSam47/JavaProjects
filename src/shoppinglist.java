@@ -16,7 +16,7 @@ public class shoppinglist {
 		System.out.println("Would you like to see all of your items or one? (Say all/one)");
 		String answer = scan.next();
 		if (answer.equalsIgnoreCase("all")) {
-			for (int x=0; x<itemnumbers +1;x++) {
+			for (int x=0; x<itemnumbers;x++) {
 				System.out.println(array[x]);
 			}
 		}

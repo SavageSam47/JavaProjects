@@ -90,6 +90,29 @@ public class connect5 {
 				}
 
 			}
+			int diagonalcounterX = 0;
+			for (int x = 0; x<4; x++) {
+				for(int y=0; y<3; y++) {
+					if (board [x][y].equals("X ")) {
+						for (int a = x; a<5; a++) {
+							if (diagonalcounterX == 4) {
+								System.out.println("Player X Wins!!!");
+								break;
+								
+							}
+							else if (board[a][a].equals("X ")) {
+								diagonalcounterX++;
+							}
+							else {
+								diagonalcounterX = 0;
+							}
+
+
+						}
+					}
+				}
+			}
+			
 
 			int loop1 = 0;
 			while (loop1==0) {

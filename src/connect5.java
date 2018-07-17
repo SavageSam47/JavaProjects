@@ -60,7 +60,7 @@ public class connect5 {
 						counterX++;
 						if(counterX==4) {
 							System.out.println("Player X WINS!!!");
-							loop++;
+							System.exit(0);
 						}
 
 					}
@@ -79,7 +79,7 @@ public class connect5 {
 						counterX++;
 						if(counterX==4) {
 							System.out.println("Player X WINS!!!");
-							loop++;
+							System.exit(0);
 						}
 
 					}
@@ -91,14 +91,14 @@ public class connect5 {
 
 			}
 			int diagonalcounterX = 0;
-			for (int x = 0; x<4; x++) {
-				for(int y=0; y<3; y++) {
+			for (int x = 0; x<3; x++) {
+				for(int y=0; y<4; y++) {
 					if (board [x][y].equals("X ")) {
 						for (int a = x; a<5; a++) {
 							if (diagonalcounterX == 4) {
 								System.out.println("Player X Wins!!!");
-								break;
-								
+								System.exit(0);
+
 							}
 							else if (board[a][a].equals("X ")) {
 								diagonalcounterX++;
@@ -112,7 +112,31 @@ public class connect5 {
 					}
 				}
 			}
-			
+			for (int x = 5; x>=3; x--) {
+				for(int y=0; y<4; y++) {
+					if (board [x][y].equals("X ")) {
+						int z = y;
+						
+						for (int a = x; a>=0; a--,z++) {
+								if (diagonalcounterX == 4) {
+									System.out.println("Player X Wins!!!");
+									System.exit(0);
+
+								}
+								else if (board[a][z].equals("X ")) {
+									diagonalcounterX++;
+								}
+								else {
+									diagonalcounterX = 0;
+									z=0;
+								}
+
+							
+						}
+					}
+				}
+			}
+
 
 			int loop1 = 0;
 			while (loop1==0) {
@@ -180,6 +204,53 @@ public class connect5 {
 				}
 
 			}
+			int diagonalcounterY = 0;
+			for (int x = 0; x<4; x++) {
+				for(int y=0; y<3; y++) {
+					if (board [x][y].equals("Y ")) {
+						for (int a = x; a<5; a++) {
+							if (diagonalcounterY == 4) {
+								System.out.println("Player Y Wins!!!");
+								System.exit(0);
+
+							}
+							else if (board[a][a].equals("Y ")) {
+								diagonalcounterY++;
+							}
+							else {
+								diagonalcounterY = 0;
+							}
+
+
+						}
+					}
+				}
+			}
+			for (int x = 5; x>=3; x--) {
+				for(int y=0; y<4; y++) {
+					if (board [x][y].equals("Y ")) {
+						int z = y;
+						
+						for (int a = x; a>=0; a--,z++) {
+								if (diagonalcounterY == 4) {
+									System.out.println("Player Y Wins!!!");
+									System.exit(0);
+
+								}
+								else if (board[a][z].equals("Y ")) {
+									diagonalcounterY++;
+								}
+								else {
+									diagonalcounterY = 0;
+									z=0;
+								}
+
+							
+						}
+					}
+				}
+			}
+
 		}
 
 	}

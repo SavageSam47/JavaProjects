@@ -5,6 +5,7 @@ public class connect5 {
 		// TODO Auto-generated method stub
 		int playerx = 0;
 		int playery = 0;
+		int tiecounter = 0;
 		Scanner scan=new  Scanner(System.in);
 		String[][] board=new String [6][7];
 		for(int x=0;x<6;x++) {
@@ -55,6 +56,7 @@ public class connect5 {
 			int counterX = 0;
 			//Horizontal CheckerX
 			for(int x=5;x>=0;x--) {
+				counterX = 0;
 				for(int y = 0;y<7;y++) {
 					if(board [x][y].equals("X ")) {
 						counterX++;
@@ -74,6 +76,7 @@ public class connect5 {
 			//Vertical CheckerX
 			//int y = 0;y<7;y++
 			for(int y = 0;y<7;y++) {
+				counterX = 0;
 				for(int x=5;x>=0;x--) {
 					if(board [x][y].equals("X ")) {
 						counterX++;
@@ -92,6 +95,7 @@ public class connect5 {
 			}
 			int diagonalcounterX = 0;
 			for (int x = 0; x<3; x++) {
+				diagonalcounterX = 0;
 				for(int y=0; y<4; y++) {
 					if (board [x][y].equals("X ")) {
 						for (int a = x; a<5; a++) {
@@ -113,26 +117,42 @@ public class connect5 {
 				}
 			}
 			for (int x = 5; x>=3; x--) {
+				diagonalcounterX = 0;
 				for(int y=0; y<4; y++) {
 					if (board [x][y].equals("X ")) {
 						int z = y;
-						
+
 						for (int a = x; a>=0; a--,z++) {
-								if (diagonalcounterX == 4) {
-									System.out.println("Player X Wins!!!");
-									System.exit(0);
+							if (diagonalcounterX == 4) {
+								System.out.println("Player X Wins!!!");
+								System.exit(0);
 
-								}
-								else if (board[a][z].equals("X ")) {
-									diagonalcounterX++;
-								}
-								else {
-									diagonalcounterX = 0;
-									z=0;
-								}
+							}
+							else if (board[a][z].equals("X ")) {
+								diagonalcounterX++;
+							}
+							else {
+								diagonalcounterX = 0;
+								z=0;
+							}
 
-							
+
 						}
+					}
+				}
+			}
+			for (int x=0; x<6; x++) {
+				for(int y=0; y<7; y++) {
+					if (tiecounter == 42) {
+						System.out.println("Tie.");
+						System.exit(0);
+
+					}
+					else if(board [x][y].equals("Y ") || board [x][y].equals("X ")) {
+						tiecounter++;
+					}
+					else {
+						tiecounter=0;
 					}
 				}
 			}
@@ -171,6 +191,7 @@ public class connect5 {
 			}
 			int counterY = 0;
 			for(int x=5;x>=0;x--) {
+				counterY=0;
 				for(int y = 0;y<7;y++) {
 					if(board [x][y].equals("Y ")) {
 						counterY++;
@@ -189,6 +210,7 @@ public class connect5 {
 			//int x=5;x>=0;x--
 			//int y = 0;y<7;y++
 			for(int y = 0;y<7;y++) {
+				counterY=0;
 				for(int x=5;x>=0;x--) {
 					if(board [x][y].equals("Y ")) {
 						counterY++;
@@ -206,6 +228,7 @@ public class connect5 {
 			}
 			int diagonalcounterY = 0;
 			for (int x = 0; x<4; x++) {
+				diagonalcounterY = 0;
 				for(int y=0; y<3; y++) {
 					if (board [x][y].equals("Y ")) {
 						for (int a = x; a<5; a++) {
@@ -227,26 +250,43 @@ public class connect5 {
 				}
 			}
 			for (int x = 5; x>=3; x--) {
+				diagonalcounterY=0;
 				for(int y=0; y<4; y++) {
 					if (board [x][y].equals("Y ")) {
 						int z = y;
-						
+
 						for (int a = x; a>=0; a--,z++) {
-								if (diagonalcounterY == 4) {
-									System.out.println("Player Y Wins!!!");
-									System.exit(0);
+							if (diagonalcounterY == 4) {
+								System.out.println("Player Y Wins!!!");
+								System.exit(0);
 
-								}
-								else if (board[a][z].equals("Y ")) {
-									diagonalcounterY++;
-								}
-								else {
-									diagonalcounterY = 0;
-									z=0;
-								}
+							}
+							else if (board[a][z].equals("Y ")) {
+								diagonalcounterY++;
+							}
+							else {
+								diagonalcounterY = 0;
+								z=0;
+							}
 
-							
+
 						}
+					}
+				}
+			}
+
+			for (int x=0; x<6; x++) {
+				for(int y=0; y<7; y++) {
+					if (tiecounter == 42) {
+						System.out.println("Tie.");
+						System.exit(0);
+
+					}
+					else if(board [x][y].equals("Y ") || board [x][y].equals("X ")) {
+						tiecounter++;
+					}
+					else {
+						tiecounter=0;
 					}
 				}
 			}

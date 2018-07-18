@@ -13,7 +13,8 @@ public class tictactoewithmethods {
 			}
 		}
 		while (loop<9) {
-
+			boolean winx = false;
+			boolean win = false;
 			printboard(board);
 			int loop1 = 0;
 			while (loop1==0) {
@@ -22,7 +23,7 @@ public class tictactoewithmethods {
 				System.out.println("Player X type coordnate two:");
 				int yp1 = scan.nextInt();
 
-				
+
 				if (board[xp1][yp1].equals("O ") || board[xp1][yp1].equals("X ")) {
 					System.out.println("That spot is already taken. Try again.");
 				}
@@ -34,22 +35,10 @@ public class tictactoewithmethods {
 
 			}
 			//Check all
-			if (board[0][0].equals("X ") && board[0][1].equals("X ") && board[0][2].equals("X ")||
-					board[1][0].equals("X ") && board[1][1].equals("X ") && board[1][2].equals("X ")||
-					board[2][0].equals("X ") && board[2][1].equals("X ") && board[2][2].equals("X ")) {
-				System.out.println("Player X wins");
-				break;
-			}
-			if (board[0][0].equals("X ") && board[1][0].equals("X ") && board[2][1].equals("X ")||
-					board[0][1].equals("X ") && board[1][1].equals("X ") && board[2][1].equals("X ")||
-					board[0][2].equals("X ") && board[1][2].equals("X ") && board[2][2].equals("X ")) {
-				System.out.println("Player X wins");
-				break;
-			}
-			if (board[0][0].equals("X ") && board[1][1].equals("X ") && board[2][2].equals("X ")||
-					board[0][2].equals("X ") && board[1][1].equals("X ") && board[2][0].equals("X ")) {
-				System.out.println("Player X wins");
-				break;
+			winx = wincheckerx(board, winx);
+			if (winx == true) {
+				System.out.println("Game Over");
+				System.exit(0);
 			}
 			printboard(board);
 			if (loop==9) {
@@ -72,25 +61,15 @@ public class tictactoewithmethods {
 					loop++;
 					board [xp2][yp2] ="O ";
 				}
+
 			}
-			if (board[0][0].equals("O ") && board[0][1].equals("O ") && board[0][2].equals("O ")||
-					board[1][0].equals("O ") && board[1][1].equals("O ") && board[1][2].equals("O ")||
-					board[2][0].equals("O ") && board[2][1].equals("O ") && board[2][2].equals("O ")) {
-				System.out.println("Player O wins");
-				break;
+			win = wincheckero(board, win);
+			if (win == true) {
+				System.out.println("Game Over");
+				System.exit(0);
 			}
-			if (board[0][0].equals("O ") && board[1][0].equals("O ") && board[2][1].equals("O ")||
-					board[0][1].equals("O ") && board[1][1].equals("O ") && board[2][1].equals("O ")||
-					board[0][2].equals("O ") && board[1][2].equals("O ") && board[2][2].equals("O ")) {
-				System.out.println("Player O wins");
-				break;
-			}
-			if (board[0][0].equals("O ") && board[1][1].equals("O ") && board[2][2].equals("O ")||
-					board[0][2].equals("O ") && board[1][1].equals("O ") && board[2][0].equals("O ")) {
-				System.out.println("Player O wins");
-				break;
-			}
-			
+
+
 
 
 		}
@@ -104,4 +83,184 @@ public class tictactoewithmethods {
 		}
 		return board;
 	}
+	public static boolean wincheckerx(String board[][], boolean winx) {
+		int counterx = 0;
+		for (int x = 0; x<3; x++) {
+			counterx = 0;
+			for(int y=0; y<3; y++) {
+
+				if (board[x][y].equals("X ")) {
+
+					counterx++;
+					if (counterx == 3) {
+						printboard(board);
+						System.out.println("X WINS");
+						winx = true;
+						System.exit(0);
+					}
+				}
+				else {
+					counterx = 0;
+				}
+			}
+		}
+		for (int x = 0; x<3; x++) {
+			counterx = 0;
+			for(int y=0; y<3; y++) {
+
+				if (board[y][x].equals("X ")) {
+					counterx++;
+					if (counterx == 3) {
+						printboard(board);
+						System.out.println("X WINS");
+						winx = true;
+						System.exit(0);
+					}
+				}
+				else {
+					counterx = 0;
+				}
+			}
+		}
+		for (int x=0; x<3; x++) {
+			counterx = 0;
+			for (int y=0; y<3; y++) {
+				if (board[x][y].equals("X ")) {
+					for (int a=0; a<3; a++) {
+
+						if (board[a][a].equals("X ")) {
+							counterx++;
+							if (counterx == 3) {
+								printboard(board);
+								System.out.println("X WINS");
+								winx = true;
+								System.exit(0);
+							}
+						}
+						else { 
+							counterx = 0;
+
+						}
+					}
+				}
+			}
+		}
+		for (int x=0; x<3; x++) {
+			counterx = 0;
+			for (int y=0; y<3; y++) {
+				if (board[x][y].equals("O ")) {
+					for (int a=2; a>=0; a--) {
+						for (int z=0; z<3; z++)
+							if (board[a][z].equals("O ")) {
+								counterx++;
+								if (counterx == 3) {
+									printboard(board);
+									System.out.println("X WINS");
+									winx = true;
+									System.exit(0);
+									
+								}
+							}
+							else { 
+								counterx = 0;
+
+							}
+					}
+				}
+			}
+		}
+		return winx;
+	}
+	public static boolean wincheckero(String board[][], boolean win) {
+		//
+		int countero = 0;
+		for (int x = 0; x<3; x++) {
+			countero = 0;
+			for(int y=0; y<3; y++) {
+
+				if (board[x][y].equals("O ")) {
+
+					countero++;
+					if (countero == 3) {
+						printboard(board);
+						System.out.println("O WINS");
+						win = true;
+						System.exit(0);
+					}
+				}
+				else {
+					countero = 0;
+				}
+			}
+		}
+		for (int x = 0; x<3; x++) {
+			countero = 0;
+			for(int y=0; y<3; y++) {
+
+				if (board[y][x].equals("O ")) {
+					countero++;
+					if (countero == 3) {
+						printboard(board);
+						System.out.println("O WINS");
+						win = true;
+						System.exit(0);
+					}
+				}
+				else {
+					countero = 0;
+				}
+			}
+		}
+		for (int x=0; x<3; x++) {
+			countero = 0;
+			for (int y=0; y<3; y++) {
+				if (board[x][y].equals("O ")) {
+					for (int a=0; a<3; a++) {
+
+						if (board[a][a].equals("O ")) {
+							countero++;
+							if (countero == 3) {
+								printboard(board);
+								System.out.println("O WINS");
+								win = true;
+								System.exit(0);
+							}
+						}
+						else { 
+							countero = 0;
+
+						}
+					}
+				}
+			}
+		}
+		for (int x=0; x<3; x++) {
+			countero = 0;
+			for (int y=0; y<3; y++) {
+				if (board[x][y].equals("O ")) {
+					for (int a=2; a>=0; a--) {
+						for (int z=0; z<3; z++)
+							if (board[a][z].equals("O ")) {
+								countero++;
+								if (countero == 3) {
+									printboard(board);
+									System.out.println("O WINS");
+									win = true;
+									
+									System.exit(0);
+								}
+							}
+							else { 
+								countero = 0;
+
+							}
+					}
+				}
+			}
+		}
+	
+
+	return win;
+}
+
 }

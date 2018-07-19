@@ -165,22 +165,24 @@ public class connect4withmethods {
 
 		}
 		int diagonalcounterX = 0;
-		for (int x = 0; x<3; x++) {
+		for (int x = 0; x<6; x++) {
 			diagonalcounterX = 0;
-			for(int y=0; y<4; y++) {
-				if (board [x][y].equals("X ")) {
+			for(int y=0; y<7; y++) {
+				if (board [x][y].equals("X ") && x<3 && y<4) {
+					int z = y;
+					for (int a = x; a<x+4; a++,z++) {
+						if (board[a][z].equals("X ")) {
+							diagonalcounterX++;
+							if (diagonalcounterX == 4) {
+								printboard(board);
+								System.out.println("Player X Wins!!!");
+								System.exit(0);
 
-					if (board[x][y].equals("X ")) {
-						diagonalcounterX++;
-						if (diagonalcounterX == 4) {
-							printboard(board);
-							System.out.println("Player X Wins!!!");
-							System.exit(0);
-
+							}
 						}
-					}
-					else {
-						diagonalcounterX = 0;
+						else {
+							diagonalcounterX = 0;
+						}
 					}
 				}
 			}
@@ -255,12 +257,13 @@ public class connect4withmethods {
 
 		}
 		int diagonalcounterY = 0;
-		for (int x = 0; x<3; x++) {
+		for (int x = 0; x<6; x++) {
 			diagonalcounterY = 0;
-			for(int y=0; y<4; y++) {
-				if (board [x][y].equals("Y ")) {
-					for (int a = x; a<5; a++) {
-						for (int z = y; z<5; z++) {
+			for(int y=0; y<7; y++) {
+				if (board [x][y].equals("Y ") && x<3 && y<4) {
+					int z = y;
+					for (int a = x; a<5; a++, z++) {
+						
 							if (board[a][z].equals("Y ")) {
 								diagonalcounterY++;
 								if (diagonalcounterY == 4) {
@@ -274,7 +277,7 @@ public class connect4withmethods {
 								diagonalcounterY = 0;
 							}
 
-						}
+						
 					}
 				}
 			}

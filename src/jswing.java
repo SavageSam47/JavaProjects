@@ -25,7 +25,7 @@ public class jswing extends JFrame {
 		b.setBounds(40, 40, 200, 30);
 		b.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(b, "Russell is bad at dogeball");
+				JOptionPane.showMessageDialog(b, "");
 			}
 		});
 		return b;

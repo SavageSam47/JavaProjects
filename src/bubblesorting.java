@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 public class bubblesorting {
 
@@ -5,33 +6,38 @@ public class bubblesorting {
 		// TODO Auto-generated method stub
 
 		Scanner scan = new Scanner(System.in);
-		System.out.println("How many numbers would you like to input?");
-		int oof = scan.nextInt();
-		int [] array= new int [oof];
-		
-		for (int a = 0; a<oof; a++) {
-			System.out.println("Enter Value for position " + (a + 1));
-			array [a] = scan.nextInt();
+		ArrayList<Integer> array= new ArrayList<Integer>();
+		boolean finished = false;
+		while (finished == false) {
+			System.out.println("Enter a Value, type done when you are done");
+			String input = scan.next();
+			if(input.equalsIgnoreCase("done")) {
+				break;
+			}
+			else {
+				int input2 = Integer.parseInt(input);
+				array.add(input2);
+			}
 		}
-		arraychecker(array, oof);
-		printarray(array, oof);
+		arraychecker(array);
+		printarray(array);
 		
 
 
 	}
-	public static int[] printarray(int [] array, int oof) {
-		for(int x = 0; x<oof; x++) {
-			System.out.print(array[x]+"   ");
-		}
+	public static ArrayList<Integer> printarray(ArrayList<Integer> array) {
+		System.out.print(array);
 		return array;
 	}
-	public static int[] arraychecker(int [] array, int oof) {
-		for (int y = 0; y<oof; y++) {
-			for(int x = 0; x<oof-1; x++) {
-				if(array[x]>array[x+1]) {
-					int a = array [x];
-					array[x]=array[x+1];
-					array[x+1]=a;
+	public static ArrayList<Integer> arraychecker(ArrayList<Integer> array) {
+		for (int y = 0; y<array.size(); y++) {
+			for(int x = 0; x<array.size()-1; x++) {
+				if(array.get(x)>array.get(x+1)) {
+					int a = array.get(x);
+					int b = array.get(x+1);
+					array.set(x, b);
+					array.set(x+1, a);
+					
 				}
 			}
 		}

@@ -19,6 +19,9 @@ public class lists {
 		}
 		System.out.print(names);
 
+		
+		
+		
 	}
 
 }

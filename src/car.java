@@ -5,11 +5,11 @@ public class car {
 		// TODO Auto-generated method stub
 		car car1=new car("V-cilinder","flextape",5);
 		car1.setEngine("flex seal");
-		System.out.print(car1.getBrand());
-
+		System.out.println(car1.getBrand());
+		System.out.println(car1);
 	}
 	
-	
+	//constructors/////////////////
 	private static String engineType;
 	private static String brand;
 	private static int mpg;
@@ -23,7 +23,9 @@ public class car {
 		brand=b;
 		mpg=mg;
 	}
+	/////////////////////////
 	
+	////getters///////////
 	public String getEngineType() {
 		return engineType;
 	}
@@ -33,7 +35,8 @@ public class car {
 	public int getMPG() {
 		return mpg;
 	}
-	
+	//////////////////
+	///setters////////////
 	public void setEngine(String change_engine) {
 		engineType=change_engine;
 	}
@@ -42,6 +45,12 @@ public class car {
 	}
 	public void setMPG(int change_mpg) {
 		mpg=change_mpg;
+	}
+	///////////////////////////
+	////tostring//////////////
+	public String toString() {
+		return "Car's engine type: " + engineType + "   Brand: " + brand;
+		
 	}
 	
 	

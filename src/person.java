@@ -37,7 +37,7 @@ public class person {
 		age=change_age;
 	}
 	public String toString() {
-		return "Name: " + firstName + " " + lastName + "||And he/she is " +  age + "years old.";
+		return "Name: " + firstName + " " + lastName + "And he/she is " +  age + "years old.";
 		
 	}
 }

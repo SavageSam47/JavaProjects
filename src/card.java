@@ -11,12 +11,12 @@ public class card {
 	}
 	private  String suit;
 	private  int number;
-	
+
 	public card(String et, int mg){
 		suit =et;
 		number=mg;
 	}
-	
+
 	public String getSuit() {
 		return suit;
 	}
@@ -24,7 +24,20 @@ public class card {
 		return number;
 	}
 	public String toString() {
-		return "The winner is the " + number + " of " + suit;
-		
+		if (number == 14) {
+			return "The suit is " + suit + " and the value is Ace";
+		}
+		else if (number == 11) {
+			return "The suit is " + suit + " and the value is Jack";
+		}
+		else if (number == 12) {
+			return "The suit is " + suit + " and the value is Queen";
+		}
+		else if (number == 13) {
+			return "The suit is " + suit + " and the value is King";
+		}
+		else {
+			return "The suit is " + suit + " and the value is " + number;
+		}
 	}
 }

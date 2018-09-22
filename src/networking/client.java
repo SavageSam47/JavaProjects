@@ -25,10 +25,10 @@ public class client {
 		BufferedReader n = new BufferedReader(new InputStreamReader(s.getInputStream()));
 		BufferedWriter i = new BufferedWriter(new OutputStreamWriter(s.getOutputStream()));
 		while (s.isConnected()){
-			String input = scan.next();
-			i.write(input);
-			i.newLine();
-			i.flush();
+//			String input = scan.next();
+//			i.write(input);
+//			i.newLine();
+//			i.flush();
 			System.out.println(n.readLine());
 		}
 	} catch (IOException e) {

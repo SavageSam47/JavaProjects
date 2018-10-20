@@ -8,19 +8,20 @@ import java.io.OutputStreamWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.Vector;
 
 public class clientmanager extends Thread{
 
 	boolean acceptingclients = true;
-	ArrayList<Socket> clientlist;
+	Vector<Socket> clientlist;
 	ServerSocket s;
 	
-	public clientmanager(ArrayList<Socket> clientlist, ServerSocket s){
+	public clientmanager(Vector<Socket> clientlist, ServerSocket s){
 		
 		this.clientlist = clientlist;
 		this.s = s;
 		
-		clientlist = new ArrayList();
+		clientlist = new Vector();
 		
 		
 		
@@ -40,8 +41,9 @@ public class clientmanager extends Thread{
 		}
 	}
 	public synchronized void braodcast(String message) throws IOException{
-		for (Socket b:this.clientlist){
-			BufferedWriter n = new BufferedWriter(new OutputStreamWriter(b.getOutputStream()));
+		for (int i = 0; i<clientlist.size(); i++){
+			System.out.println("testststst");
+			BufferedWriter n = new BufferedWriter(new OutputStreamWriter(clientlist.get(i).getOutputStream()));
 			n.write(message);
 			n.newLine();
 			n.flush();

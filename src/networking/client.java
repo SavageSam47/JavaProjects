@@ -22,14 +22,12 @@ public class client {
 	try {
 		
 		s = new Socket("127.0.0.1",25565);
-		BufferedReader n = new BufferedReader(new InputStreamReader(s.getInputStream()));
-		BufferedWriter i = new BufferedWriter(new OutputStreamWriter(s.getOutputStream()));
+		messageReciever r = new messageReciever(s);
+		messageSender ms = new messageSender(s);
 		while (s.isConnected()){
-//			String input = scan.next();
-//			i.write(input);
-//			i.newLine();
-//			i.flush();
-			System.out.println(n.readLine());
+		
+			ms.send(scan.nextLine());
+			
 		}
 	} catch (IOException e) {
 		// TODO Auto-generated catch block

@@ -10,7 +10,10 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.*;
 import java.util.ArrayList;
+import java.util.PriorityQueue;
 import java.util.Scanner;
+import java.util.Vector;
+import java.util.concurrent.PriorityBlockingQueue;
 
 public class server {
 
@@ -18,22 +21,23 @@ public class server {
 		// TODO Auto-generated method stub
 
 		ServerSocket s = null;
-		ArrayList<Socket> clients = new ArrayList();
-		
-		
-		
-		
-			s = new ServerSocket(25565);
-			
-		
+		Vector<Socket> clients = new Vector();
+
+
+
+
+		s = new ServerSocket(25565);
+
+
 		clientmanager manager = new clientmanager(clients, s);
 		manager.start();
 		while(true){
-		manager.braodcast("hi");
-		
+			manager.braodcast("hi");
+			System.out.println("testst");
+
 		}
-		
-		
+
+
 	}
 
 }

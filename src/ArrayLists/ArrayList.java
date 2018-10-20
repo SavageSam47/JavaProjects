@@ -51,33 +51,35 @@ public class ArrayList {
 	}
 	
 	public static boolean contains(String word){
-		return answer;
+		for (int x = 0; x < array.length; x++){
+			if (array[x] == word){
+				return true;
+			}
+		}
+		return false;
 		
 	}
 	
 	public static boolean isEmpty(){
-		
+		if (array.length == 0){
+			return true;
+		}
+		return false;
 	}
 	
+	
 	public static void remove(String str){
-		for(int x = 0; x<array.length; x++){
-			if(array[x] == str){
-				//finish
-			}
-		}
-		
-		temp = new String[array.length - 1];
-		
 		int j = 0;
-		
-		for(int i = 0; i<array.length; i++){
-			if(i != index){
-				temp[j] = array[i];
+		temp = new String[array.length - 1];
+		for(int x = 0; x<array.length; x++){
+			if(array[x] != str){
+				temp[j] = array[x];
 				j++;
 			}
-			
-			
 		}
+		
+	
+		
 		array = temp;
 	}
 	

@@ -7,7 +7,7 @@ public class square {
 		int input = scan.nextInt();
 		for(int y = 0; y<input; y++) {
 			for(int x = 0; x<input; x++) {
-				System.out.print("*");
+				System.out.print("* ");
 			}
 			System.out.println(" ");
 		}

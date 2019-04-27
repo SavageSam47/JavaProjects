@@ -1,3 +1,4 @@
+import java.util.Random;
 
 public class card {
 
@@ -8,6 +9,7 @@ public class card {
 		System.out.println(card1);
 		System.out.println(card1.getNumber());
 		System.out.println(card1.getSuit());
+		Random r = new Random();
 	}
 	private  String suit;
 	private  int number;

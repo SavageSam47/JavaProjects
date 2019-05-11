@@ -15,63 +15,197 @@ public class autominer {
 		r.setAutoDelay(40);
 		r.setAutoWaitForIdle(true);
 		r.delay(9000);
-		/**PointerInfo a = MouseInfo.getPointerInfo();
-		Point b = a.getLocation();
-		int x = (int) b.getX();
-		int y = (int) b.getY();
-		System.out.println(y);
-		Thread.sleep(10);
-		r.mouseMove(x + 3000, y);
-		Thread.sleep(10);**/
-		/*
-		b = a.getLocation();
-		 x = (int) b.getX();
-		 y = (int) b.getY();
-		 Thread.sleep(10);
-		r.mouseMove(x, y +1);
-		 */
-		// ~ ~ ~ ~90 ~
-		for (int u = 0;u<2;u++){
-		for (int t = 0;t<10;t++){
-			r.keyPress(KeyEvent.VK_W);
-			r.mousePress(InputEvent.BUTTON1_MASK);
-			Thread.sleep(350);
-			r.mouseRelease(InputEvent.BUTTON1_MASK);
-			Thread.sleep(30);
-			r.keyRelease(KeyEvent.VK_W);
-			
-		}
-		turn();
-		r.keyPress(KeyEvent.VK_W);
-		r.mousePress(InputEvent.BUTTON1_MASK);
-		Thread.sleep(60);
-		r.mouseRelease(InputEvent.BUTTON1_MASK);
-		Thread.sleep(60);
+		angle();
+		layer();
+		turnright();
+		down();
+		twodown();
+		angle();
+		layer();
 
-		r.mousePress(InputEvent.BUTTON1_MASK);
-		Thread.sleep(60);
-		r.mouseRelease(InputEvent.BUTTON1_MASK);
-		Thread.sleep(100);
-		r.keyRelease(KeyEvent.VK_W);
-		turn();
-		}
+
 
 	}
-	public static void turn() throws AWTException{
+	public static void startangle() throws AWTException{
+		Robot r = new Robot();
+		type("/tp S83 ");
+		type("50 ");
+		for (int x=0;x<2;x++){
+			r.keyPress(KeyEvent.VK_SHIFT);
+			r.keyPress(KeyEvent.VK_BACK_QUOTE);
+			r.keyRelease(KeyEvent.VK_BACK_QUOTE);
+			r.keyRelease(KeyEvent.VK_SHIFT);
+			type(" ");
+		}
+		type("0");
+		type(" ");
+
+		type("4");
+		type("8");
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+	}
+	public static void layer() throws AWTException, InterruptedException{
+		for(int yr = 0;yr<5;yr++){
+			if (yr<4){
+				mine();
+				turnright();
+				twoblock();
+				turnright();
+				mine();
+				turnleft();
+				twoblock();
+				turnleft();
+			}
+			else{
+				mine();
+			}
+
+		}
+		turnright();
+		twoblock();
+		turnright();
+		mine();
+	}
+
+	public static void down() throws AWTException{
 		Robot r = new Robot();
 		type("/tp S83 ");
 		for (int x=0;x<3;x++){
+			r.keyPress(KeyEvent.VK_SHIFT);
+			r.keyPress(KeyEvent.VK_BACK_QUOTE);
+			r.keyRelease(KeyEvent.VK_BACK_QUOTE);
+			r.keyRelease(KeyEvent.VK_SHIFT);
+			type(" ");
+		}
 		r.keyPress(KeyEvent.VK_SHIFT);
 		r.keyPress(KeyEvent.VK_BACK_QUOTE);
 		r.keyRelease(KeyEvent.VK_BACK_QUOTE);
 		r.keyRelease(KeyEvent.VK_SHIFT);
 		type(" ");
+
+		type("90");
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+		turnright();
+	}
+	public static void angle() throws AWTException{
+		Robot r = new Robot();
+		type("/tp S83 ");
+		for (int x=0;x<3;x++){
+			r.keyPress(KeyEvent.VK_SHIFT);
+			r.keyPress(KeyEvent.VK_BACK_QUOTE);
+			r.keyRelease(KeyEvent.VK_BACK_QUOTE);
+			r.keyRelease(KeyEvent.VK_SHIFT);
+			type(" ");
+		}
+		r.keyPress(KeyEvent.VK_SHIFT);
+		r.keyPress(KeyEvent.VK_BACK_QUOTE);
+		r.keyRelease(KeyEvent.VK_BACK_QUOTE);
+		r.keyRelease(KeyEvent.VK_SHIFT);
+		type(" ");
+
+		type("4");
+		type("8");
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+	}
+	public static void twodown() throws AWTException, InterruptedException{
+		Robot r = new Robot();
+
+		Thread.sleep(150);
+
+		r.mousePress(InputEvent.BUTTON1_MASK);
+		Thread.sleep(150);
+		r.mouseRelease(InputEvent.BUTTON1_MASK);
+
+		Thread.sleep(150);
+
+		r.mousePress(InputEvent.BUTTON1_MASK);
+		Thread.sleep(150);
+		r.mouseRelease(InputEvent.BUTTON1_MASK);
+
+
+
+
+
+	}
+	public static void twoblock() throws AWTException, InterruptedException{
+		Robot r = new Robot();
+
+		r.keyPress(KeyEvent.VK_W);
+		Thread.sleep(100);
+		r.mousePress(InputEvent.BUTTON1_MASK);
+		Thread.sleep(150);
+		r.mouseRelease(InputEvent.BUTTON1_MASK);
+		Thread.sleep(60);
+		r.keyRelease(KeyEvent.VK_W);
+		Thread.sleep(60);
+		r.keyPress(KeyEvent.VK_W);
+		Thread.sleep(100);
+		r.mousePress(InputEvent.BUTTON1_MASK);
+		Thread.sleep(150);
+		r.mouseRelease(InputEvent.BUTTON1_MASK);
+		Thread.sleep(60);
+		r.keyRelease(KeyEvent.VK_W);
+		Thread.sleep(60);
+
+
+
+
+	}
+	public static void mine() throws AWTException, InterruptedException{
+		Robot r = new Robot();
+		for (int t = 0;t<10;t++){
+			r.keyPress(KeyEvent.VK_W);
+			r.mousePress(InputEvent.BUTTON1_MASK);
+			Thread.sleep(350);
+			r.mouseRelease(InputEvent.BUTTON1_MASK);
+			Thread.sleep(45);
+			r.keyRelease(KeyEvent.VK_W);
+
+		}
+		r.keyPress(KeyEvent.VK_W);
+		Thread.sleep(45);
+		r.keyRelease(KeyEvent.VK_W);
+	}
+	public static void turnright() throws AWTException{
+		Robot r = new Robot();
+		type("/tp S83 ");
+		for (int x=0;x<3;x++){
+			r.keyPress(KeyEvent.VK_SHIFT);
+			r.keyPress(KeyEvent.VK_BACK_QUOTE);
+			r.keyRelease(KeyEvent.VK_BACK_QUOTE);
+			r.keyRelease(KeyEvent.VK_SHIFT);
+			type(" ");
 		}
 		r.keyPress(KeyEvent.VK_SHIFT);
 		r.keyPress(KeyEvent.VK_BACK_QUOTE);
 		r.keyRelease(KeyEvent.VK_BACK_QUOTE);
 		r.keyRelease(KeyEvent.VK_SHIFT);
 		type("90 ");
+		r.keyPress(KeyEvent.VK_SHIFT);
+		r.keyPress(KeyEvent.VK_BACK_QUOTE);
+		r.keyRelease(KeyEvent.VK_BACK_QUOTE);
+		r.keyRelease(KeyEvent.VK_SHIFT);
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+	}
+	public static void turnleft() throws AWTException{
+		Robot r = new Robot();
+		type("/tp S83 ");
+		for (int x=0;x<3;x++){
+			r.keyPress(KeyEvent.VK_SHIFT);
+			r.keyPress(KeyEvent.VK_BACK_QUOTE);
+			r.keyRelease(KeyEvent.VK_BACK_QUOTE);
+			r.keyRelease(KeyEvent.VK_SHIFT);
+			type(" ");
+		}
+		r.keyPress(KeyEvent.VK_SHIFT);
+		r.keyPress(KeyEvent.VK_BACK_QUOTE);
+		r.keyRelease(KeyEvent.VK_BACK_QUOTE);
+		r.keyRelease(KeyEvent.VK_SHIFT);
+		type("270 ");
 		r.keyPress(KeyEvent.VK_SHIFT);
 		r.keyPress(KeyEvent.VK_BACK_QUOTE);
 		r.keyRelease(KeyEvent.VK_BACK_QUOTE);

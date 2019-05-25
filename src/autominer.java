@@ -17,7 +17,6 @@ public class autominer {
 		r.delay(9000);
 		angle();
 		layer();
-		turnright();
 		down();
 		twodown();
 		angle();

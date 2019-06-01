@@ -6,12 +6,20 @@ import java.awt.Robot;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 
+import javax.swing.JFrame;
+
 public class autominer {
 
 	public static void main(String[] args) throws AWTException, InterruptedException {
 		// TODO Auto-generated method stub
 		Robot r = new Robot();
 
+		JFrame f = new JFrame();
+        f.getContentPane().add(new completekey());
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.pack();
+        f.setVisible(true);
+		
 		r.setAutoDelay(40);
 		r.setAutoWaitForIdle(true);
 		r.delay(9000);
@@ -22,7 +30,7 @@ public class autominer {
 		angle();
 		layer();
 
-
+		
 
 	}
 	public static void startangle() throws AWTException{

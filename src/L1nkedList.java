@@ -23,6 +23,7 @@ public class L1nkedList {
 			while (true) {
 				if (current.getNext()==null) {
 					current.setNext(new LinkedListNode(value, current, null));
+					end = current.getNext();
 					
 					break;
 				}
@@ -30,7 +31,7 @@ public class L1nkedList {
 			}
 		}	
 	}
-	public void Print() {
+	public void printAll() {
 		LinkedListNode current = start;
 		while(current.getNext()!=null) {
 			System.out.println(current.getValue());
@@ -40,6 +41,9 @@ public class L1nkedList {
 		
 	}
 	public void printBack() {
-		LinkedListNode current;
+		LinkedListNode current = end;
+		while(current.getPrevious()!=null) {
+			System.out.println();
+		}
 	}
 }

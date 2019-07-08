@@ -18,8 +18,10 @@ public class LinkedListTest {
 		L1nkedList list = new L1nkedList();
 		for(int x=0;x<6;x++) {
 			list.Add(x);
-			list.Print();
+			
 		}
+		list.addAt(3456, 45);
+		list.printAll();
 		
 		
 		

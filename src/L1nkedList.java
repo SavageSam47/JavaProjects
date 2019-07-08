@@ -43,7 +43,40 @@ public class L1nkedList {
 	public void printBack() {
 		LinkedListNode current = end;
 		while(current.getPrevious()!=null) {
-			System.out.println();
+			System.out.println(current.getValue());
+			current = current.getPrevious();
 		}
+	}
+
+	public boolean addAt(int value, int index) {
+		LinkedListNode current = start;
+		if (index==0){
+			start.setPrevious(new LinkedListNode(value, null, current));
+			start = start.getPrevious();
+		}
+		if (index==1){
+			current.setNext(new LinkedListNode(value, current, current.getNext()));
+		}
+		else{
+			for (int x=0;x<index;x++){
+				current = current.getNext();
+				if (x==index-1){
+					if (current != end){
+						current.setNext(new LinkedListNode(value, current, current.getNext()));
+					
+					}
+					
+					else if (current==end) {
+						return false;
+					}
+				
+				
+				}
+
+			
+		}
+	}
+		return true;
+		
 	}
 }

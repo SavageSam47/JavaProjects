@@ -27,5 +27,12 @@ public class LinkedListNode {
 		return next;
 	}
 	
+	public void setPrevious(LinkedListNode n) {
+		previous = n;
+	}
+	
+	public LinkedListNode getPrevious() {
+		return previous;
+	}
 	
 }

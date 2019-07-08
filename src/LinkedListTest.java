@@ -20,8 +20,14 @@ public class LinkedListTest {
 			list.Add(x);
 			
 		}
-		list.addAt(3456, 45);
-		list.printAll();
+			
+			list.printAll();
+			list.findRemove(0);
+			list.printAll();
+
+		
+			
+		
 		
 		
 		

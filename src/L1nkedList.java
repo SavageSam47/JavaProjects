@@ -1,36 +1,22 @@
 
-
 public class L1nkedList {
-	
 	LinkedListNode end;
 	LinkedListNode start;
 	public L1nkedList() {
 		start = null;
-		end = null;
-		
+		end = null;	
 	}
-	
-	
-	
+	//o(1)
 	public void Add(int value) {
-		LinkedListNode current = start;
 		if (start==null) {
-			start= new LinkedListNode(value, null,null);
-			
+			start= new LinkedListNode(value, null,null);	
 		}
-		
 		else {
-			while (true) {
-				if (current.getNext()==null) {
-					current.setNext(new LinkedListNode(value, current, null));
-					end = current.getNext();
-					
-					break;
-				}
-				current=current.getNext();
-			}
+			end.setNext(new LinkedListNode(value, end, null));
+			end = end.getNext();
 		}	
 	}
+	//o(n)
 	public void printAll() {
 		LinkedListNode current = start;
 		while(current.getNext()!=null) {
@@ -38,8 +24,8 @@ public class L1nkedList {
 			current = current.getNext();
 		}
 		System.out.println(current.getValue());
-		
 	}
+	//o(n)
 	public void printBack() {
 		LinkedListNode current = end;
 		while(current.getPrevious()!=null) {
@@ -48,6 +34,7 @@ public class L1nkedList {
 		}
 		System.out.println(current.getValue());
 	}
+	//o(n)
 	public int getLength(){
 		if (start==null){
 			return 0;
@@ -63,7 +50,7 @@ public class L1nkedList {
 			return counter;
 		}
 	}
-	
+	//o(n)
 	public boolean contains(int c){
 		LinkedListNode current = start;
 		int run = 0;
@@ -78,12 +65,8 @@ public class L1nkedList {
 				current = current.getNext();
 			}
 			run++;
-			
-			
 		}
-		
 	}
-	
 	public boolean findRemove(int c){
 		int run = 0;
 		LinkedListNode current = start;
@@ -98,13 +81,9 @@ public class L1nkedList {
 				end = end.getPrevious();
 				return true;
 			}
-			
 			else if (current.getValue()==c && c!=start.getValue() && c!=end.getValue()){
-				//System.out.println(current.getPrevious().getNext());
 				current.getPrevious().setNext(current.getNext());
-				//System.out.println(current.getPrevious().getNext());
 				current.getNext().setPrevious(current.getPrevious());
-				
 				current.setNext(null);
 				current.setPrevious(null);
 				return true;
@@ -115,15 +94,9 @@ public class L1nkedList {
 			else{
 				current = current.getNext();
 				run++;
-			}
-			
-			
-			
-			
-		}
-		
+			}	
+		}	
 	}
-	
 	public boolean removeAt(int index){
 		int run = 0;
 		LinkedListNode current = start;
@@ -132,7 +105,6 @@ public class L1nkedList {
 		}
 		else{
 			while(true){
-				
 				if (index==0){
 					current.getNext().setPrevious(null);
 					start = current.getNext();
@@ -144,11 +116,8 @@ public class L1nkedList {
 					return true;
 				}
 				else if (index != 0 && index != getLength() && run==index){
-					//System.out.println(current.getPrevious().getNext());
 					current.getPrevious().setNext(current.getNext());
-					//System.out.println(current.getPrevious().getNext());
 					current.getNext().setPrevious(current.getPrevious());
-					
 					current.setNext(null);
 					current.setPrevious(null);
 					return true;
@@ -162,9 +131,7 @@ public class L1nkedList {
 				}
 			}
 		}
-		
 	}
-	
 	public boolean addAt(int value, int index) {
 		LinkedListNode current = start;
 		if (index>getLength() || index<0){

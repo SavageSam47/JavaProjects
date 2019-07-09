@@ -1,4 +1,4 @@
-
+import java.util.LinkedList;
 public class LinkedListTest {
 
 	public static void main(String[] args) {
@@ -25,6 +25,8 @@ public class LinkedListTest {
 		System.out.println(list.removeAt(-4));
 			list.printAll();
 			list.printBack();**/
+
+			LinkedList list = new LinkedList();
 
 			
 			

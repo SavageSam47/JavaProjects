@@ -2,6 +2,7 @@
 public class L1nkedList {
 	LinkedListNode end;
 	LinkedListNode start;
+	int length = getLength();
 	public L1nkedList() {
 		start = null;
 		end = null;	
@@ -51,22 +52,23 @@ public class L1nkedList {
 		}
 	}
 	//o(n)
+
+	//O(N)
 	public boolean contains(int c){
 		LinkedListNode current = start;
-		int run = 0;
 		while (true){
 			if (current.getValue()==c){
 				return true;
 			}
-			else if(run>getLength()){
+			else if(current.getNext()==null && current.getValue()!=c){
 				return false;
 			}
 			else{
 				current = current.getNext();
 			}
-			run++;
 		}
 	}
+	//o(n)
 	public boolean findRemove(int c){
 		int run = 0;
 		LinkedListNode current = start;
@@ -88,7 +90,7 @@ public class L1nkedList {
 				current.setPrevious(null);
 				return true;
 			}
-			else if(run>getLength()){
+			else if(current.getNext()==null && current.getValue()!=c){
 				return false;
 			}
 			else{
@@ -97,10 +99,11 @@ public class L1nkedList {
 			}	
 		}	
 	}
+	//o(n)
 	public boolean removeAt(int index){
 		int run = 0;
 		LinkedListNode current = start;
-		if(index<0 || index>getLength()-1){
+		if(index<0 || index>length-1){
 			return false;
 		}
 		else{
@@ -110,19 +113,19 @@ public class L1nkedList {
 					start = current.getNext();
 					return true;
 				}
-				else if (index==getLength()-1){
+				else if (index==length-1){
 					end.getPrevious().setNext(null);
 					end = end.getPrevious();
 					return true;
 				}
-				else if (index != 0 && index != getLength() && run==index){
+				else if (index != 0 && index != length && run==index){
 					current.getPrevious().setNext(current.getNext());
 					current.getNext().setPrevious(current.getPrevious());
 					current.setNext(null);
 					current.setPrevious(null);
 					return true;
 				}
-				else if(run>getLength()){
+				else if(run>length){
 					return false;
 				}
 				else{
@@ -132,9 +135,10 @@ public class L1nkedList {
 			}
 		}
 	}
+	//o(n)
 	public boolean addAt(int value, int index) {
 		LinkedListNode current = start;
-		if (index>getLength() || index<0){
+		if (index>length || index<0){
 			return false;
 		}
 		else{
@@ -149,7 +153,7 @@ public class L1nkedList {
 				current.getNext().getNext().setPrevious(current.getNext());
 				return true;
 			}
-			else if (index==getLength()){
+			else if (index==length){
 				current = end;
 				current.setNext(new LinkedListNode(value, current, null));
 				end = current.getNext();

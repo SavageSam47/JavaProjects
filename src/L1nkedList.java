@@ -46,6 +46,7 @@ public class L1nkedList {
 			System.out.println(current.getValue());
 			current = current.getPrevious();
 		}
+		System.out.println(current.getValue());
 	}
 	public int getLength(){
 		if (start==null){
@@ -62,7 +63,7 @@ public class L1nkedList {
 			return counter;
 		}
 	}
-
+	
 	public boolean contains(int c){
 		LinkedListNode current = start;
 		int run = 0;
@@ -82,24 +83,23 @@ public class L1nkedList {
 		}
 		
 	}
-
+	
 	public boolean findRemove(int c){
 		int run = 0;
 		LinkedListNode current = start;
 		while (true){
-			if (c==0){
+			if (c==start.getValue()){
 				current.getNext().setPrevious(null);
 				start = current.getNext();
+				return true;
 			}
-			if (c==getLength()){
-				while(run>getLength()){
-					current = current.getNext();
-				}
-				current.getPrevious().setNext(null);
-				end = current.getPrevious();
+			else if (c==end.getValue()){
+				end.getPrevious().setNext(null);
+				end = end.getPrevious();
+				return true;
 			}
 			
-			else if (current.getValue()==c){
+			else if (current.getValue()==c && c!=start.getValue() && c!=end.getValue()){
 				//System.out.println(current.getPrevious().getNext());
 				current.getPrevious().setNext(current.getNext());
 				//System.out.println(current.getPrevious().getNext());
@@ -113,28 +113,80 @@ public class L1nkedList {
 				return false;
 			}
 			else{
-				
+				current = current.getNext();
+				run++;
 			}
-			current = current.getNext();
-			run++;
-		
 			
+			
+			
+			
+		}
+		
+	}
+	
+	public boolean removeAt(int index){
+		int run = 0;
+		LinkedListNode current = start;
+		if(index<0 || index>getLength()-1){
+			return false;
+		}
+		else{
+			while(true){
+				
+				if (index==0){
+					current.getNext().setPrevious(null);
+					start = current.getNext();
+					return true;
+				}
+				else if (index==getLength()-1){
+					end.getPrevious().setNext(null);
+					end = end.getPrevious();
+					return true;
+				}
+				else if (index != 0 && index != getLength() && run==index){
+					//System.out.println(current.getPrevious().getNext());
+					current.getPrevious().setNext(current.getNext());
+					//System.out.println(current.getPrevious().getNext());
+					current.getNext().setPrevious(current.getPrevious());
+					
+					current.setNext(null);
+					current.setPrevious(null);
+					return true;
+				}
+				else if(run>getLength()){
+					return false;
+				}
+				else{
+					current = current.getNext();
+					run++;
+				}
+			}
 		}
 		
 	}
 	
 	public boolean addAt(int value, int index) {
 		LinkedListNode current = start;
-		if (index>getLength() || index<getLength()){
+		if (index>getLength() || index<0){
 			return false;
 		}
 		else{
 			if (index==0){
 				start.setPrevious(new LinkedListNode(value, null, current));
 				start = start.getPrevious();
+				start.getNext().setPrevious(start);
+				return true;
 			}
-			if (index==1){
+			else if (index==1){
 				current.setNext(new LinkedListNode(value, current, current.getNext()));
+				current.getNext().getNext().setPrevious(current.getNext());
+				return true;
+			}
+			else if (index==getLength()){
+				current = end;
+				current.setNext(new LinkedListNode(value, current, null));
+				end = current.getNext();
+				return true;
 			}
 			else{
 				for (int x=0;x<index;x++){
@@ -142,24 +194,15 @@ public class L1nkedList {
 					if (x==index-2){
 						if (current != null){
 							current.setNext(new LinkedListNode(value, current, current.getNext()));
-							
+							current.getNext().getNext().setPrevious(current.getNext());
 						}
-						
-						
-						
-						
 					}
 					else if (current==null) {
 						return false;
 					}
-					
-					
-					
 				}
 			}
 			return true;
 		}
-		
-		
 	}
 }

@@ -2,20 +2,36 @@
 public class L1nkedList {
 	LinkedListNode end;
 	LinkedListNode start;
-	int length = getLength();
+	int length = 0;
 	public L1nkedList() {
 		start = null;
 		end = null;	
 	}
 	//o(1)
-	public void Add(int value) {
+	public void addLast(int value) {
 		if (start==null) {
-			start= new LinkedListNode(value, null,null);	
+			start= new LinkedListNode(value, null,null);
+			end=start;
+			length++;	
 		}
 		else {
 			end.setNext(new LinkedListNode(value, end, null));
 			end = end.getNext();
+			length++;
 		}	
+	}
+	public void addFirst(int value){
+		addAt(value, 0);
+	}
+	public int removeFirst(){
+		int x = start.getValue();
+		removeAt(0);
+		return x;
+	}
+	public int removeLast(){
+		int x = end.getValue();
+		removeAt(length);
+		return x;
 	}
 	//o(n)
 	public void printAll() {
@@ -36,7 +52,7 @@ public class L1nkedList {
 		System.out.println(current.getValue());
 	}
 	//o(n)
-	public int getLength(){
+	/*public int getLength(){
 		if (start==null){
 			return 0;
 		}
@@ -50,6 +66,10 @@ public class L1nkedList {
 			counter++;
 			return counter;
 		}
+	}*/
+	//o(1)
+	public int getLength(){
+		return length;
 	}
 	//o(n)
 
@@ -76,11 +96,13 @@ public class L1nkedList {
 			if (c==start.getValue()){
 				current.getNext().setPrevious(null);
 				start = current.getNext();
+				length--;
 				return true;
 			}
 			else if (c==end.getValue()){
 				end.getPrevious().setNext(null);
 				end = end.getPrevious();
+				length--;
 				return true;
 			}
 			else if (current.getValue()==c && c!=start.getValue() && c!=end.getValue()){
@@ -88,6 +110,7 @@ public class L1nkedList {
 				current.getNext().setPrevious(current.getPrevious());
 				current.setNext(null);
 				current.setPrevious(null);
+				length--;
 				return true;
 			}
 			else if(current.getNext()==null && current.getValue()!=c){
@@ -111,11 +134,13 @@ public class L1nkedList {
 				if (index==0){
 					current.getNext().setPrevious(null);
 					start = current.getNext();
+					length--;
 					return true;
 				}
 				else if (index==length-1){
 					end.getPrevious().setNext(null);
 					end = end.getPrevious();
+					length--;
 					return true;
 				}
 				else if (index != 0 && index != length && run==index){
@@ -123,6 +148,7 @@ public class L1nkedList {
 					current.getNext().setPrevious(current.getPrevious());
 					current.setNext(null);
 					current.setPrevious(null);
+					length--;
 					return true;
 				}
 				else if(run>length){
@@ -142,21 +168,29 @@ public class L1nkedList {
 			return false;
 		}
 		else{
-			if (index==0){
-				start.setPrevious(new LinkedListNode(value, null, current));
+			if (start==null){
+				start = new LinkedListNode(value, null, null);
+				end=start;
+				return true;
+			}
+			else if (index==0){
+				start.setPrevious(new LinkedListNode(value, null, start));
 				start = start.getPrevious();
 				start.getNext().setPrevious(start);
+				length++;
 				return true;
 			}
 			else if (index==1){
 				current.setNext(new LinkedListNode(value, current, current.getNext()));
 				current.getNext().getNext().setPrevious(current.getNext());
+				length++;
 				return true;
 			}
 			else if (index==length){
 				current = end;
 				current.setNext(new LinkedListNode(value, current, null));
 				end = current.getNext();
+				length++;
 				return true;
 			}
 			else{
@@ -166,6 +200,7 @@ public class L1nkedList {
 						if (current != null){
 							current.setNext(new LinkedListNode(value, current, current.getNext()));
 							current.getNext().getNext().setPrevious(current.getNext());
+							length++;
 						}
 					}
 					else if (current==null) {

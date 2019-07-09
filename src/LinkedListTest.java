@@ -14,7 +14,7 @@ public class LinkedListTest {
 		node3.setNext(node4);
 		
 		node1.setValue(5);
-		System.out.println(node1.getNext().getValue());
+		System.out.println(node1.getNext().getValue());*/
 		L1nkedList list = new L1nkedList();
 		for(int x=2;x<6;x++) {
 			list.Add(x);
@@ -22,21 +22,16 @@ public class LinkedListTest {
 		}
 			
 			
-		System.out.println(list.removeAt(-4));
+		
+			
+			System.out.println(list.getLength());
+			System.out.println("---------------------");
 			list.printAll();
-			list.printBack();**/
-
-			LinkedList list = new LinkedList();
-
+			System.out.println("---------------------");
+			System.out.println(list.addAt(3434, 5));
 			
-			
-
-		
-			
-		
-		
-		
-		
+			list.printAll();
+			System.out.println("---------------------");
+			System.out.println(list.getLength());
 	}
-
 }

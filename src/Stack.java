@@ -1,7 +1,6 @@
-
-
+import java.util.ArrayList;
 public class Stack<Element>{
-    private L1nkedList<Element> list;
+    private ArrayList<Element> list;
     public Stack(){
         list = new L1nkedList<Element>();
     }

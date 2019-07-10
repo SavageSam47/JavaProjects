@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class postFixEval{
     private Stack<Object> stack = new Stack<Object>();
-    
+    int opnum = 0;
     public postFixEval(){
         
     }
@@ -13,8 +13,11 @@ public class postFixEval{
 
     public void addOperator(String operator) {
         int first1 = (int) stack.Pop();
-        int second1 = (int) stack.pop();
-        if(operator.equals("+")){
+        int second1 = (int) stack.Pop();
+        if(opnum>stack.getSize()){
+            System.out.println("Too Many Operators");
+        }
+        else if(operator.equals("+")){
             stack.Place(first1+second1);
         }
         else if(operator.equals("-")){
@@ -26,6 +29,7 @@ public class postFixEval{
         else if(operator.equals("/")){
             stack.Place(first1/second1);
         }
+        opnum++;
     }
 
     public int result() {

@@ -24,6 +24,9 @@ public class L1nkedList<Element> {
 		addAt(value, 0);
 	}
 	public Element removeFirst(){
+		if(length==0){
+			return null;
+		}
 		Element x = start.getValue();
 		removeAt(0);
 		return x;
@@ -145,27 +148,34 @@ public class L1nkedList<Element> {
 		}	
 	}
 	//o(n)
-	public boolean removeAt(int index){
+	/*public boolean removeAt(int index){
 		int run = 0;
 		LinkedListNode<Element> current = start;
 		if(index<0 || index>length-1){
 			return false;
 		}
+		if(index==0 && length==1){
+			start=null;
+			end=null;
+			length--;
+			return true;
+		}
 		else{
 			while(true){
-				if (index==0){
-					current.getNext().setPrevious(null);
-					start = current.getNext();
+				
+				if (index==0 && length>1){
+					start.getNext().setPrevious(null);
+					start = start.getNext();
 					length--;
 					return true;
 				}
-				else if (index==length-1){
+				else if (index==length-1 && length>1){
 					end.getPrevious().setNext(null);
 					end = end.getPrevious();
 					length--;
 					return true;
 				}
-				else if (index != 0 && index != length && run==index){
+				else if (index != 0 && index != length && run==index && length>1){
 					current.getPrevious().setNext(current.getNext());
 					current.getNext().setPrevious(current.getPrevious());
 					current.setNext(null);
@@ -176,12 +186,31 @@ public class L1nkedList<Element> {
 				else if(run>length){
 					return false;
 				}
-				else{
+				else if (length>1){
 					current = current.getNext();
 					run++;
 				}
 			}
 		}
+	}*/
+	//Redo removeAt
+	public boolean removeAt(int i){
+		LinkedListNode current = start;
+		if(i<0 || i>=length){
+			return false;
+		}
+		if(i<length){
+			end.getPrevious().setNext(null);
+			end = end.getPrevious();
+		}
+	//	if i
+		for(int x=0;x<i;x++){
+			current = current.getNext();
+		}
+		if(current.getNext()!=null){
+
+		}
+		return false;
 	}
 	//o(n)
 	public boolean addAt(Element value, int index) {
@@ -193,7 +222,9 @@ public class L1nkedList<Element> {
 			if (start==null){
 				start = new LinkedListNode<Element>(value, null, null);
 				end=start;
+				length++;
 				return true;
+				
 			}
 			else if (index==0){
 				start.setPrevious(new LinkedListNode<Element>(value, null, start));

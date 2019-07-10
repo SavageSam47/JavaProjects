@@ -1,14 +1,9 @@
 public class Stacktest{
     public static void main(String[] args){
-        Stack stack = new Stack();
-        for(int x =0; x<6; x++){
-            stack.Place(x);
-            
-        }
-        for(int x =0; x<6; x++){
-        }
-        System.out.println(stack.Pop());
-        stack.Place(434);
+        Stack<Integer> stack = new Stack<Integer>();
+        stack.Place(4);
+        // stack.Place(4);
+        // System.out.println(stack.Pop());
         System.out.println(stack.Pop());
 
     }

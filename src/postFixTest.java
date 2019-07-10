@@ -12,6 +12,10 @@ public class postFixTest{
         eval.addInt(4);
         eval.addOperator("*");
         eval.addOperator("+");
+        // eval.addOperator("+");
+        // eval.addInt(35);
+        // eval.addInt(35);
+        // eval.addOperator("+");
         System.out.println(eval.result());
     }
 }

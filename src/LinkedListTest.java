@@ -15,16 +15,9 @@ public class LinkedListTest {
 		
 		node1.setValue(5);
 		System.out.println(node1.getNext().getValue());*/
-		L1nkedList<Object> list = new L1nkedList<Object>();
-		for(int x=2;x<6;x++) {
-			list.addLast(x);
-			
-		}
-		list.addLast("value");
-		list.rotateRight();
-			list.printAll();
-			Object first = list.getIndex(0);
-			String first1 = (String) first;
-			System.out.println(first1.charAt(2)); 
+		L1nkedList<Integer> list = new L1nkedList<Integer>();
+		list.addFirst(4);
+		System.out.println(list.removeAt(0));
+		list.printAll();
 	}
 }

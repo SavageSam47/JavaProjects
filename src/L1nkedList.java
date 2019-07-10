@@ -1,8 +1,8 @@
 
 public class L1nkedList<Element> {
-	LinkedListNode<Element> end;
-	LinkedListNode<Element> start;
-	int length = 0;
+	private LinkedListNode<Element> end;
+	private LinkedListNode<Element> start;
+	private int length = 0;
 	public L1nkedList() {
 		start = null;
 		end = null;	
@@ -28,6 +28,7 @@ public class L1nkedList<Element> {
 		removeAt(0);
 		return x;
 	}
+
 	public Element removeLast(){
 		if(length==0){
 			return null;

@@ -1,7 +1,7 @@
 
 
 public class Queue<Element>{
-    L1nkedList<Element> list;
+    private L1nkedList<Element> list;
     public Queue(){
         list = new L1nkedList<Element>();
     }

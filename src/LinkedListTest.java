@@ -1,4 +1,4 @@
-import java.util.LinkedList;
+
 public class LinkedListTest {
 
 	public static void main(String[] args) {
@@ -15,23 +15,16 @@ public class LinkedListTest {
 		
 		node1.setValue(5);
 		System.out.println(node1.getNext().getValue());*/
-		L1nkedList list = new L1nkedList();
+		L1nkedList<Object> list = new L1nkedList<Object>();
 		for(int x=2;x<6;x++) {
-			list.Add(x);
+			list.addLast(x);
 			
 		}
-			
-			
-		
-			
-			System.out.println(list.getLength());
-			System.out.println("---------------------");
+		list.addLast("value");
+		list.rotateRight();
 			list.printAll();
-			System.out.println("---------------------");
-			System.out.println(list.addAt(3434, 5));
-			
-			list.printAll();
-			System.out.println("---------------------");
-			System.out.println(list.getLength());
+			Object first = list.getIndex(0);
+			String first1 = (String) first;
+			System.out.println(first1.charAt(2)); 
 	}
 }

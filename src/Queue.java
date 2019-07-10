@@ -1,14 +1,14 @@
 
 
-public class Queue{
-    L1nkedList list;
+public class Queue<Element>{
+    L1nkedList<Element> list;
     public Queue(){
-        list = new L1nkedList();
+        list = new L1nkedList<Element>();
     }
-    public void Push(int value){
+    public void Push(Element value){
         list.addFirst(value);
     }
-    public int Pop(){
+    public Element Pop(){
         return list.removeLast();
     }
 }

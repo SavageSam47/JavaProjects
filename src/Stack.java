@@ -1,14 +1,14 @@
 
 
-public class Stack{
-    L1nkedList list;
+public class Stack<Element>{
+    L1nkedList<Element> list;
     public Stack(){
-        list = new L1nkedList();
+        list = new L1nkedList<Element>();
     }
-    public void Place(int value){
+    public void Place(Element value){
         list.addFirst(value);
     }
-    public int Pop(){
+    public Element Pop(){
         return list.removeFirst();
     }
 }

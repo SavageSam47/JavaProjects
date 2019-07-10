@@ -1,37 +1,37 @@
 
-public class LinkedListNode {
+public class LinkedListNode<Element> {
 
-	private int value;
-	private LinkedListNode previous;
-	private LinkedListNode next;
+	private Element value;
+	private LinkedListNode<Element> previous;
+	private LinkedListNode<Element> next;
 	
-	public LinkedListNode(int value1, LinkedListNode previous1, LinkedListNode next1) {
+	public LinkedListNode(Element value1, LinkedListNode<Element> previous1, LinkedListNode<Element> next1) {
 		value = value1;
 		previous = previous1;
 		next = next1;
 	}
 	
-	public int getValue(){
+	public Element getValue(){
 		return value;
 	}
 	
-	public void setValue(int v) {
+	public void setValue(Element v) {
 		value = v;
 	}
 	
-	public void setNext(LinkedListNode n) {
+	public void setNext(LinkedListNode<Element> n) {
 		next = n;
 	}
 	
-	public LinkedListNode getNext() {
+	public LinkedListNode<Element> getNext() {
 		return next;
 	}
 	
-	public void setPrevious(LinkedListNode n) {
+	public void setPrevious(LinkedListNode<Element> n) {
 		previous = n;
 	}
 	
-	public LinkedListNode getPrevious() {
+	public LinkedListNode<Element> getPrevious() {
 		return previous;
 	}
 	

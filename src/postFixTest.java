@@ -8,6 +8,7 @@ public class postFixTest{
         eval.addInt(3);
         eval.addOperator("*");
         eval.addOperator("+");
+        
         eval.addInt(6);
         eval.addInt(4);
         eval.addOperator("*");

@@ -1,13 +1,13 @@
-import java.util.ArrayList;
+
 public class Stack<Element>{
-    private ArrayList<Element> list;
+    private L1nkedList<Element> list;
     public Stack(){
         list = new L1nkedList<Element>();
     }
-    public void Place(Element value){
+    public void push(Element value){
         list.addFirst(value);
     }
-    public Element Pop(){
+    public Element pop(){
         return list.removeFirst();
     }
     public Element Read(){

@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+
 
 public class postFixEval{
     private Stack<Object> stack = new Stack<Object>();
@@ -8,32 +8,36 @@ public class postFixEval{
     }
 
     public void addInt(int newVal) {
-        stack.Place(newVal);
+        stack.push(newVal);
     }
 
     public void addOperator(String operator) {
-        int first1 = (int) stack.Pop();
-        int second1 = (int) stack.Pop();
         if(opnum>stack.getSize()){
             System.out.println("Too Many Operators");
         }
-        else if(operator.equals("+")){
-            stack.Place(first1+second1);
+        int first1 = (int) stack.pop();
+        int second1 = (int) stack.pop();
+        if(operator.equals("+")){
+            stack.push(first1+second1);
+            opnum++;
         }
         else if(operator.equals("-")){
-            stack.Place(first1-second1);
+            stack.push(first1-second1);
+            opnum++;
         }
         else if(operator.equals("*")){
-            stack.Place(first1*second1);
+            stack.push(first1*second1);
+            opnum++;
         }
         else if(operator.equals("/")){
-            stack.Place(first1/second1);
+            stack.push(first1/second1);
+            opnum++;
         }
-        opnum++;
+        opnum--;
     }
 
     public int result() {
-        int last = (int) stack.Pop();
+        int last = (int) stack.pop();
         return last;
     }
 }

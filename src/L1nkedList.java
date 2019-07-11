@@ -28,18 +28,26 @@ public class L1nkedList<Element> {
 			return null;
 		}
 		Element x = start.getValue();
-		removeAt(0);
+		if(length>1){
+			start.getNext().setPrevious(null);
+			start = start.getNext();
+			length--;
+		}
+		else if (length==1){
+			start = null;
+			length--;
+		}
 		return x;
 	}
-
+	
 	public Element removeLast(){
 		if(length==0){
 			return null;
 		}
 		else{
-		Element x = end.getValue();
-		removeAt(length);
-		return x;
+			Element x = end.getValue();
+			removeAt(length);
+			return x;
 		}
 	}
 	//o(n)
@@ -193,24 +201,48 @@ public class L1nkedList<Element> {
 			}
 		}
 	}*/
-	//Redo removeAt
 	public boolean removeAt(int i){
-		LinkedListNode current = start;
-		if(i<0 || i>=length){
+		LinkedListNode<Element> current = start;
+		if(i<0 || i>length){
 			return false;
 		}
-		if(i<length){
-			end.getPrevious().setNext(null);
-			end = end.getPrevious();
+		else{
+			if(i==0 && length==1){
+				start = null;
+				length--;
+				return true;
+				
+			}
+			else if(length>1){
+				if(i==1){
+					start.getNext().setPrevious(null);
+					start = start.getNext();
+					length--;
+					return true;
+				}
+				if(i==length){
+					end.getPrevious().setNext(null);
+					end = end.getPrevious();
+					length--;
+					return true;
+				}
+				else if (i>0 && i<length){
+					for(int c = 0;c<i+1;c++){
+						current = current.getNext();
+					}
+					current.getNext().setPrevious(current.getPrevious());
+					current.getPrevious().setNext(current.getNext());
+					length--;
+					return true;
+				}
+				else{
+					return false;
+				}
+			}
+			else{
+				return false;
+			}
 		}
-	//	if i
-		for(int x=0;x<i;x++){
-			current = current.getNext();
-		}
-		if(current.getNext()!=null){
-
-		}
-		return false;
 	}
 	//o(n)
 	public boolean addAt(Element value, int index) {

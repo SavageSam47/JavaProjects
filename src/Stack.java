@@ -13,7 +13,7 @@ public class Stack<Element>{
     public Element Read(){
         return list.getIndex(0);
     }
-    public int getSize(){
+    public int size(){
         return list.getLength();
     }
 }

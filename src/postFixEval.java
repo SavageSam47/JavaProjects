@@ -23,11 +23,23 @@ public class postFixEval{
                 only++;
                 stack.push(only);
             }
+            else{
             System.out.println("Not enough numbers, add more or print the result!");
+            }
         }
+
         
         else{
-            if(operator.equals("++")){
+            if(operator.equals("+++") && stack.size()>=3){
+                int first = stack.pop();
+                int second = stack.pop();
+                int third = stack.pop();
+                stack.push(first+second+third);
+            }
+            else if(operator.equals("+++") && stack.size()<3){
+                System.out.println("Not enough numbers, add more or print the result!");
+            }
+            else if(operator.equals("++")){
                 int only = stack.pop();
                 only++;
                 stack.push(only);

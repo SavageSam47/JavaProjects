@@ -3,11 +3,14 @@ public class binarySearchTest{
     public static void main(String[] args){
         binarySearch s = new binarySearch();
         ArrayList<Integer> list = new ArrayList<Integer>();
-        for(int x=0;x<1000;x++){
+        for(int x=1;x<100;x++){
             list.add(x);
             System.out.println(x);
         }
         
-        binarySearch.input(list, 700);
+        
+        System.out.println(binarySearch.input(list, 100));
+        //System.out.println(binarySearch.input(list, 99));
+        //System.out.println(binarySearch.input(list, 50));
     }
 }

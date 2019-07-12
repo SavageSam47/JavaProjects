@@ -7,11 +7,17 @@ public class binarySearch{
         int high = list.size();
         int low = 0;
         while (true){
-            if(find>list.get(high/2)){
-                low = high/2;
+            if(find>list.get((low+high)/2) && low==0){
+                low = (low+high)/2;
+                System.out.println("greater");
             }
-            else if(find<list.get(high/2)){
-                high = high/2;
+            else if(find>list.get((low+high)/2)){
+                low = (low+high)/2;
+                System.out.println("greater2");
+            }
+            else if(find<list.get((low+high)/2)){
+                high = (low+high)/2;
+                System.out.println("less");
             }
             else{
                 if(find==list.get(high-1) && find==list.get(low+1)){

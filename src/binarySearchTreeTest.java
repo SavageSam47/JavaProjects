@@ -4,6 +4,8 @@ public class binarySearchTreeTest {
         tree.add(5);
         tree.add(4);
         tree.add(6);
-        tree.print(tree.start);
+        tree.add(7);
+        tree.add(3);
+        tree.printCall(tree.start);
     }
 }

@@ -60,23 +60,61 @@ public class binarySearchTree {
 
     }
 
-    public void remove(int value){
+    public void remove(int value) {
         binaryNode current = start;
-        if (value>current.getValue() && current.getValue() != value){
-            //getting current to value being deleted
+        int replacewith = 0;
+        while (true) {
+            if (value > current.getValue() && current.getValue() != value) {
+                current = current.getChildR();
+            } else if (value < current.getValue() && current.getValue() != value) {
+                current = current.getChildL();
+            } else if (current.getValue() == value) {
+                break;
+            }
         }
-        if (current.getChildR()!= null){
+        if (current.getChildR() != null) {
             current = current.getChildR();
-            while(true){
-                if (current.getChildL()!=null){
-                    current = current.getChildL()
-                }
-                else{
+            while (true) {
+                if (current.getChildL() != null) {
+                    current = current.getChildL();
+                } else {
                     break;
                 }
             }
-            
+            replacewith = current.getValue();
+            if (current.getParent() != null) {
+                current.getParent().setChildL(null);
+                current.setParent(null);
+            }
+
         }
+        current = start;
+        while (true) {
+            if (value > current.getValue() && current.getValue() != value) {
+                current = current.getChildR();
+            } else if (value < current.getValue() && current.getValue() != value) {
+                current = current.getChildL();
+            } else if (current.getValue() == value) {
+                break;
+            }
+        }
+
+        current.setValue(replacewith);
     }
 
+    public binaryNode get(int value, binaryNode start1) {
+        binaryNode current = start1;
+
+        if (value > current.getValue() && current.getValue() != value) {
+            current = current.getChildR();
+            start1 = current;
+            get(value, start1);
+        } else if (value < current.getValue() && current.getValue() != value) {
+            current = current.getChildL();
+            start1 = current;
+            get(value, start1);
+        }
+        return current;
+
+    }
 }

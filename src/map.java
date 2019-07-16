@@ -21,10 +21,15 @@ public class map {
         }
     }
 
-    public String findInfo(String name){
+    public String findInfo(String name) {
         mapNode current = start;
-        while(true){
-            if(mapNode.getName!=)
+        while (true) {
+            if (name.equals(current.getName())) {
+                return current.getInfo();
+            } else {
+                current = current.getNext();
+            }
+
         }
     }
 }

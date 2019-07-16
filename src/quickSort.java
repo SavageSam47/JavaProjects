@@ -12,17 +12,22 @@ public class quickSort {
         ArrayList<Integer> left = new ArrayList<Integer>();
         if (list.size() == 1) {
             return result;
+        } else if (list.size() == 0) {
+            return result;
         } else {
+
             int pivot = list.get(list.size() - 1);
             for (int x = 0; x < list.size() - 1; x++) {
+
                 if (list.get(x) > pivot) {
                     right.add(list.get(x));
                     list.remove(x);
+                    x--;
 
-                }
-                if (list.get(x) < pivot) {
+                } else if (list.get(x) < pivot) {
                     left.add(list.get(x));
                     list.remove(x);
+                    x--;
 
                 }
 
@@ -30,6 +35,9 @@ public class quickSort {
             sort(left);
             sort(right);
             // result.addAll(left + pivot + right);
+            result.addAll(left);
+            result.add(pivot);
+            result.addAll(right);
 
         }
         return result;

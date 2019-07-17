@@ -1,11 +1,10 @@
 public class heapTest {
     public static void main(String[] args) {
         heap heab = new heap();
-        heab.add(1);
-        heab.add(2);
-        heab.add(3);
-        heab.add(4);
-        heab.add(0);
+        for (int x = 1; x < 11; x++) {
+            heab.add(x);
+        }
+        heab.remove(3);
         heab.print();
     }
 }

@@ -4,7 +4,8 @@ public class heapTest {
         for (int x = 1; x < 11; x++) {
             heab.add(x);
         }
-        heab.remove(3);
+        heab.add(0);
+        heab.removeHead();
         heab.print();
     }
 }

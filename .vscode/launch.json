@@ -1,504 +1,511 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "Debug (Launch) - Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-ArrayListTest<SamSherman>",
-            "request": "launch",
-            "mainClass": "ArrayListTest",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-test<SamSherman>",
-            "request": "launch",
-            "mainClass": "ArrayLists.test",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-ArrayListsvsarrays<SamSherman>",
-            "request": "launch",
-            "mainClass": "ArrayListsvsarrays",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-Calc<SamSherman>",
-            "request": "launch",
-            "mainClass": "Calc",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-Calculator<SamSherman>",
-            "request": "launch",
-            "mainClass": "Calculator",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-Calculatorwithloop<SamSherman>",
-            "request": "launch",
-            "mainClass": "Calculatorwithloop",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-D2array<SamSherman>",
-            "request": "launch",
-            "mainClass": "D2array",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-D3array<SamSherman>",
-            "request": "launch",
-            "mainClass": "D3array",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-GuessingGame<SamSherman>",
-            "request": "launch",
-            "mainClass": "GuessingGame",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-HelloWorld<SamSherman>",
-            "request": "launch",
-            "mainClass": "HelloWorld",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-LinkedListTest<SamSherman>",
-            "request": "launch",
-            "mainClass": "LinkedListTest",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-Stacktest<SamSherman>",
-            "request": "launch",
-            "mainClass": "Stacktest",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-Variables<SamSherman>",
-            "request": "launch",
-            "mainClass": "Variables",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-area<SamSherman>",
-            "request": "launch",
-            "mainClass": "area",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-arrays<SamSherman>",
-            "request": "launch",
-            "mainClass": "arrays",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-autominer<SamSherman>",
-            "request": "launch",
-            "mainClass": "autominer",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-bubblesorting<SamSherman>",
-            "request": "launch",
-            "mainClass": "bubblesorting",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-calculatorwithmethods<SamSherman>",
-            "request": "launch",
-            "mainClass": "calculatorwithmethods",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-car<SamSherman>",
-            "request": "launch",
-            "mainClass": "car",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-card<SamSherman>",
-            "request": "launch",
-            "mainClass": "card",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-cardsorting<SamSherman>",
-            "request": "launch",
-            "mainClass": "cardsorting",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-character<SamSherman>",
-            "request": "launch",
-            "mainClass": "character",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-completekey<SamSherman>",
-            "request": "launch",
-            "mainClass": "completekey",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-connect4withmethods<SamSherman>",
-            "request": "launch",
-            "mainClass": "connect4withmethods",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-connect5<SamSherman>",
-            "request": "launch",
-            "mainClass": "connect5",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-deck<SamSherman>",
-            "request": "launch",
-            "mainClass": "deck",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-decksplitter<SamSherman>",
-            "request": "launch",
-            "mainClass": "decksplitter",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-diamond<SamSherman>",
-            "request": "launch",
-            "mainClass": "diamond",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-etriangle<SamSherman>",
-            "request": "launch",
-            "mainClass": "etriangle",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-function<SamSherman>",
-            "request": "launch",
-            "mainClass": "function",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-annoyingrussellgame<SamSherman>",
-            "request": "launch",
-            "mainClass": "game.annoyingrussellgame",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-guessinggamewithforloop<SamSherman>",
-            "request": "launch",
-            "mainClass": "guessinggamewithforloop",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-hangman<SamSherman>",
-            "request": "launch",
-            "mainClass": "hangman",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-hollowsquare<SamSherman>",
-            "request": "launch",
-            "mainClass": "hollowsquare",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-inputs<SamSherman>",
-            "request": "launch",
-            "mainClass": "inputs",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-jswing<SamSherman>",
-            "request": "launch",
-            "mainClass": "jswing",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-listenertest<SamSherman>",
-            "request": "launch",
-            "mainClass": "listenertest",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-lists<SamSherman>",
-            "request": "launch",
-            "mainClass": "lists",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-looping<SamSherman>",
-            "request": "launch",
-            "mainClass": "looping",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-looping2<SamSherman>",
-            "request": "launch",
-            "mainClass": "looping2",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-meanchecker<SamSherman>",
-            "request": "launch",
-            "mainClass": "meanchecker",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-medianchecker<SamSherman>",
-            "request": "launch",
-            "mainClass": "medianchecker",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-methods<SamSherman>",
-            "request": "launch",
-            "mainClass": "methods",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-moreshapes<SamSherman>",
-            "request": "launch",
-            "mainClass": "moreshapes",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-mousefinder<SamSherman>",
-            "request": "launch",
-            "mainClass": "mousefinder",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-client<SamSherman>",
-            "request": "launch",
-            "mainClass": "networking.client",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-priorityqueuetest<SamSherman>",
-            "request": "launch",
-            "mainClass": "networking.priorityqueuetest",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-server<SamSherman>",
-            "request": "launch",
-            "mainClass": "networking.server",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-operators<SamSherman>",
-            "request": "launch",
-            "mainClass": "operators",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-palindromi<SamSherman>",
-            "request": "launch",
-            "mainClass": "palindromi",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-passwordgen<SamSherman>",
-            "request": "launch",
-            "mainClass": "passwordgen",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-person<SamSherman>",
-            "request": "launch",
-            "mainClass": "person",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-pixelcolors<SamSherman>",
-            "request": "launch",
-            "mainClass": "pixelcolors",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-quizgame<SamSherman>",
-            "request": "launch",
-            "mainClass": "quizgame",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-quizgamewithloop<SamSherman>",
-            "request": "launch",
-            "mainClass": "quizgamewithloop",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-ran<SamSherman>",
-            "request": "launch",
-            "mainClass": "ran",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-recursion<SamSherman>",
-            "request": "launch",
-            "mainClass": "recursion",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-robot<SamSherman>",
-            "request": "launch",
-            "mainClass": "robot",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-rockpapersizzors<SamSherman>",
-            "request": "launch",
-            "mainClass": "rockpapersizzors",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-shoppinglist<SamSherman>",
-            "request": "launch",
-            "mainClass": "shoppinglist",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-socketnetworking<SamSherman>",
-            "request": "launch",
-            "mainClass": "socketnetworking",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-square<SamSherman>",
-            "request": "launch",
-            "mainClass": "square",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-statements<SamSherman>",
-            "request": "launch",
-            "mainClass": "statements",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-test<SamSherman>(1)",
-            "request": "launch",
-            "mainClass": "test",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-Tetris<SamSherman>",
-            "request": "launch",
-            "mainClass": "tetris.Tetris",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-tictactoe<SamSherman>",
-            "request": "launch",
-            "mainClass": "tictactoe",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-tictactoewithmethods<SamSherman>",
-            "request": "launch",
-            "mainClass": "tictactoewithmethods",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-towersofannoying<SamSherman>",
-            "request": "launch",
-            "mainClass": "towersofannoying",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-triangle<SamSherman>",
-            "request": "launch",
-            "mainClass": "triangle",
-            "projectName": "SamSherman"
-        },
-        {
-            "type": "java",
-            "name": "Debug (Launch)-upsidedowntriangle<SamSherman>",
-            "request": "launch",
-            "mainClass": "upsidedowntriangle",
-            "projectName": "SamSherman"
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Debug (Launch)-heapTest<SamSherman>",
+      "request": "launch",
+      "mainClass": "heapTest",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch) - Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-ArrayListTest<SamSherman>",
+      "request": "launch",
+      "mainClass": "ArrayListTest",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-test<SamSherman>",
+      "request": "launch",
+      "mainClass": "ArrayLists.test",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-ArrayListsvsarrays<SamSherman>",
+      "request": "launch",
+      "mainClass": "ArrayListsvsarrays",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-Calc<SamSherman>",
+      "request": "launch",
+      "mainClass": "Calc",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-Calculator<SamSherman>",
+      "request": "launch",
+      "mainClass": "Calculator",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-Calculatorwithloop<SamSherman>",
+      "request": "launch",
+      "mainClass": "Calculatorwithloop",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-D2array<SamSherman>",
+      "request": "launch",
+      "mainClass": "D2array",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-D3array<SamSherman>",
+      "request": "launch",
+      "mainClass": "D3array",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-GuessingGame<SamSherman>",
+      "request": "launch",
+      "mainClass": "GuessingGame",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-HelloWorld<SamSherman>",
+      "request": "launch",
+      "mainClass": "HelloWorld",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-LinkedListTest<SamSherman>",
+      "request": "launch",
+      "mainClass": "LinkedListTest",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-Stacktest<SamSherman>",
+      "request": "launch",
+      "mainClass": "Stacktest",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-Variables<SamSherman>",
+      "request": "launch",
+      "mainClass": "Variables",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-area<SamSherman>",
+      "request": "launch",
+      "mainClass": "area",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-arrays<SamSherman>",
+      "request": "launch",
+      "mainClass": "arrays",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-autominer<SamSherman>",
+      "request": "launch",
+      "mainClass": "autominer",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-bubblesorting<SamSherman>",
+      "request": "launch",
+      "mainClass": "bubblesorting",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-calculatorwithmethods<SamSherman>",
+      "request": "launch",
+      "mainClass": "calculatorwithmethods",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-car<SamSherman>",
+      "request": "launch",
+      "mainClass": "car",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-card<SamSherman>",
+      "request": "launch",
+      "mainClass": "card",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-cardsorting<SamSherman>",
+      "request": "launch",
+      "mainClass": "cardsorting",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-character<SamSherman>",
+      "request": "launch",
+      "mainClass": "character",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-completekey<SamSherman>",
+      "request": "launch",
+      "mainClass": "completekey",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-connect4withmethods<SamSherman>",
+      "request": "launch",
+      "mainClass": "connect4withmethods",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-connect5<SamSherman>",
+      "request": "launch",
+      "mainClass": "connect5",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-deck<SamSherman>",
+      "request": "launch",
+      "mainClass": "deck",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-decksplitter<SamSherman>",
+      "request": "launch",
+      "mainClass": "decksplitter",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-diamond<SamSherman>",
+      "request": "launch",
+      "mainClass": "diamond",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-etriangle<SamSherman>",
+      "request": "launch",
+      "mainClass": "etriangle",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-function<SamSherman>",
+      "request": "launch",
+      "mainClass": "function",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-annoyingrussellgame<SamSherman>",
+      "request": "launch",
+      "mainClass": "game.annoyingrussellgame",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-guessinggamewithforloop<SamSherman>",
+      "request": "launch",
+      "mainClass": "guessinggamewithforloop",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-hangman<SamSherman>",
+      "request": "launch",
+      "mainClass": "hangman",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-hollowsquare<SamSherman>",
+      "request": "launch",
+      "mainClass": "hollowsquare",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-inputs<SamSherman>",
+      "request": "launch",
+      "mainClass": "inputs",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-jswing<SamSherman>",
+      "request": "launch",
+      "mainClass": "jswing",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-listenertest<SamSherman>",
+      "request": "launch",
+      "mainClass": "listenertest",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-lists<SamSherman>",
+      "request": "launch",
+      "mainClass": "lists",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-looping<SamSherman>",
+      "request": "launch",
+      "mainClass": "looping",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-looping2<SamSherman>",
+      "request": "launch",
+      "mainClass": "looping2",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-meanchecker<SamSherman>",
+      "request": "launch",
+      "mainClass": "meanchecker",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-medianchecker<SamSherman>",
+      "request": "launch",
+      "mainClass": "medianchecker",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-methods<SamSherman>",
+      "request": "launch",
+      "mainClass": "methods",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-moreshapes<SamSherman>",
+      "request": "launch",
+      "mainClass": "moreshapes",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-mousefinder<SamSherman>",
+      "request": "launch",
+      "mainClass": "mousefinder",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-client<SamSherman>",
+      "request": "launch",
+      "mainClass": "networking.client",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-priorityqueuetest<SamSherman>",
+      "request": "launch",
+      "mainClass": "networking.priorityqueuetest",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-server<SamSherman>",
+      "request": "launch",
+      "mainClass": "networking.server",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-operators<SamSherman>",
+      "request": "launch",
+      "mainClass": "operators",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-palindromi<SamSherman>",
+      "request": "launch",
+      "mainClass": "palindromi",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-passwordgen<SamSherman>",
+      "request": "launch",
+      "mainClass": "passwordgen",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-person<SamSherman>",
+      "request": "launch",
+      "mainClass": "person",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-pixelcolors<SamSherman>",
+      "request": "launch",
+      "mainClass": "pixelcolors",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-quizgame<SamSherman>",
+      "request": "launch",
+      "mainClass": "quizgame",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-quizgamewithloop<SamSherman>",
+      "request": "launch",
+      "mainClass": "quizgamewithloop",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-ran<SamSherman>",
+      "request": "launch",
+      "mainClass": "ran",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-recursion<SamSherman>",
+      "request": "launch",
+      "mainClass": "recursion",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-robot<SamSherman>",
+      "request": "launch",
+      "mainClass": "robot",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-rockpapersizzors<SamSherman>",
+      "request": "launch",
+      "mainClass": "rockpapersizzors",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-shoppinglist<SamSherman>",
+      "request": "launch",
+      "mainClass": "shoppinglist",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-socketnetworking<SamSherman>",
+      "request": "launch",
+      "mainClass": "socketnetworking",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-square<SamSherman>",
+      "request": "launch",
+      "mainClass": "square",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-statements<SamSherman>",
+      "request": "launch",
+      "mainClass": "statements",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-test<SamSherman>(1)",
+      "request": "launch",
+      "mainClass": "test",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-Tetris<SamSherman>",
+      "request": "launch",
+      "mainClass": "tetris.Tetris",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-tictactoe<SamSherman>",
+      "request": "launch",
+      "mainClass": "tictactoe",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-tictactoewithmethods<SamSherman>",
+      "request": "launch",
+      "mainClass": "tictactoewithmethods",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-towersofannoying<SamSherman>",
+      "request": "launch",
+      "mainClass": "towersofannoying",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-triangle<SamSherman>",
+      "request": "launch",
+      "mainClass": "triangle",
+      "projectName": "SamSherman"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-upsidedowntriangle<SamSherman>",
+      "request": "launch",
+      "mainClass": "upsidedowntriangle",
+      "projectName": "SamSherman"
+    }
+  ]
 }

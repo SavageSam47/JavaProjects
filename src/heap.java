@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class heap {
-    ArrayList<Integer> list;
+    private ArrayList<Integer> list;
 
     private void heapify(int index) {
         boolean t = true;

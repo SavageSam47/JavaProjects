@@ -32,4 +32,13 @@ public class AdjacencyMatrix {
             System.out.println(list.get(x));
         }
     }
+
+    public boolean getEdge(int node1, int node2) {
+        return list.get(node1).get(node2) == 1;
+    }
+
+    public int getVerticies() {
+        return list.size();
+    }
+
 }

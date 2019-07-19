@@ -34,11 +34,20 @@ public class AdjacencyMatrix {
     }
 
     public boolean getEdge(int node1, int node2) {
-        return list.get(node1).get(node2) == 1;
+        return list.get(node1).get(node2) >= 1;
     }
 
     public int getVerticies() {
         return list.size();
+    }
+
+    public void addEdge(int node1, int node2, int weight) {
+        list.get(node1).set(node2, weight);
+        list.get(node2).set(node1, weight);
+    }
+
+    public int getEdgeWeight(int node1, int node2){
+        return list.get(node1).get(node2);
     }
 
 }

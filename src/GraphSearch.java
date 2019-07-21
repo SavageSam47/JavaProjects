@@ -48,19 +48,21 @@ public class GraphSearch {
         }
         return list;
     }
-    public static ArrayList<Integer> Dijkstra(AdjacencyMatrix matrix, int node){
+
+    public static ArrayList<Integer> Dijkstra(AdjacencyMatrix matrix, int node) {
         Queue<Integer> q = new Queue<Integer>();
         ArrayList<Integer> list = new ArrayList<Integer>();
-        PriorityQueue<Integer> pq = new PriorityQueue<Integer>(matrix.getVerticies(), new Comparator<Integer>() {
-            public int compare(int a, int b){
-                if(list.get(a)>list.get(b)){
-                    return 1;
-                }
-                else{
-                    return -1;
-                }
-            }
-        });
+        // PriorityQueue<Integer> pq = new PriorityQueue<Integer>(matrix.getVerticies(),
+        // new Comparator<Integer>() {
+        // public int compare(int a, int b){
+        // if(list.get(a)>list.get(b)){
+        // return 1;
+        // }
+        // else{
+        // return -1;
+        // }
+        // }
+        // });
         for (int x = 0; x < matrix.getVerticies(); x++) {
             list.add(Integer.MAX_VALUE);
         }

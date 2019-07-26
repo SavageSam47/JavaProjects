@@ -15,11 +15,11 @@ public class autominer {
 		Robot r = new Robot();
 
 		JFrame f = new JFrame();
-        f.getContentPane().add(new completekey());
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        f.pack();
-        f.setVisible(true);
-		
+		f.getContentPane().add(new completekey());
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.pack();
+		f.setVisible(true);
+
 		r.setAutoDelay(40);
 		r.setAutoWaitForIdle(true);
 		r.delay(9000);
@@ -30,14 +30,13 @@ public class autominer {
 		angle();
 		layer();
 
-		
-
 	}
-	public static void startangle() throws AWTException{
+
+	public static void startangle() throws AWTException {
 		Robot r = new Robot();
 		type("/tp S83 ");
 		type("50 ");
-		for (int x=0;x<2;x++){
+		for (int x = 0; x < 2; x++) {
 			r.keyPress(KeyEvent.VK_SHIFT);
 			r.keyPress(KeyEvent.VK_BACK_QUOTE);
 			r.keyRelease(KeyEvent.VK_BACK_QUOTE);
@@ -52,9 +51,10 @@ public class autominer {
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
 	}
-	public static void layer() throws AWTException, InterruptedException{
-		for(int yr = 0;yr<5;yr++){
-			if (yr<4){
+
+	public static void layer() throws AWTException, InterruptedException {
+		for (int yr = 0; yr < 5; yr++) {
+			if (yr < 4) {
 				mine();
 				turnright();
 				twoblock();
@@ -63,8 +63,7 @@ public class autominer {
 				turnleft();
 				twoblock();
 				turnleft();
-			}
-			else{
+			} else {
 				mine();
 			}
 
@@ -75,10 +74,10 @@ public class autominer {
 		mine();
 	}
 
-	public static void down() throws AWTException{
+	public static void down() throws AWTException {
 		Robot r = new Robot();
 		type("/tp S83 ");
-		for (int x=0;x<3;x++){
+		for (int x = 0; x < 3; x++) {
 			r.keyPress(KeyEvent.VK_SHIFT);
 			r.keyPress(KeyEvent.VK_BACK_QUOTE);
 			r.keyRelease(KeyEvent.VK_BACK_QUOTE);
@@ -96,10 +95,11 @@ public class autominer {
 		r.keyRelease(KeyEvent.VK_ENTER);
 		turnright();
 	}
-	public static void angle() throws AWTException{
+
+	public static void angle() throws AWTException {
 		Robot r = new Robot();
 		type("/tp S83 ");
-		for (int x=0;x<3;x++){
+		for (int x = 0; x < 3; x++) {
 			r.keyPress(KeyEvent.VK_SHIFT);
 			r.keyPress(KeyEvent.VK_BACK_QUOTE);
 			r.keyRelease(KeyEvent.VK_BACK_QUOTE);
@@ -117,7 +117,8 @@ public class autominer {
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
 	}
-	public static void twodown() throws AWTException, InterruptedException{
+
+	public static void twodown() throws AWTException, InterruptedException {
 		Robot r = new Robot();
 
 		Thread.sleep(150);
@@ -132,12 +133,9 @@ public class autominer {
 		Thread.sleep(150);
 		r.mouseRelease(InputEvent.BUTTON1_MASK);
 
-
-
-
-
 	}
-	public static void twoblock() throws AWTException, InterruptedException{
+
+	public static void twoblock() throws AWTException, InterruptedException {
 		Robot r = new Robot();
 
 		r.keyPress(KeyEvent.VK_W);
@@ -157,13 +155,11 @@ public class autominer {
 		r.keyRelease(KeyEvent.VK_W);
 		Thread.sleep(60);
 
-
-
-
 	}
-	public static void mine() throws AWTException, InterruptedException{
+
+	public static void mine() throws AWTException, InterruptedException {
 		Robot r = new Robot();
-		for (int t = 0;t<10;t++){
+		for (int t = 0; t < 10; t++) {
 			r.keyPress(KeyEvent.VK_W);
 			r.mousePress(InputEvent.BUTTON1_MASK);
 			Thread.sleep(350);
@@ -176,10 +172,11 @@ public class autominer {
 		Thread.sleep(45);
 		r.keyRelease(KeyEvent.VK_W);
 	}
-	public static void turnright() throws AWTException{
+
+	public static void turnright() throws AWTException {
 		Robot r = new Robot();
 		type("/tp S83 ");
-		for (int x=0;x<3;x++){
+		for (int x = 0; x < 3; x++) {
 			r.keyPress(KeyEvent.VK_SHIFT);
 			r.keyPress(KeyEvent.VK_BACK_QUOTE);
 			r.keyRelease(KeyEvent.VK_BACK_QUOTE);
@@ -198,10 +195,11 @@ public class autominer {
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
 	}
-	public static void turnleft() throws AWTException{
+
+	public static void turnleft() throws AWTException {
 		Robot r = new Robot();
 		type("/tp S83 ");
-		for (int x=0;x<3;x++){
+		for (int x = 0; x < 3; x++) {
 			r.keyPress(KeyEvent.VK_SHIFT);
 			r.keyPress(KeyEvent.VK_BACK_QUOTE);
 			r.keyRelease(KeyEvent.VK_BACK_QUOTE);
@@ -220,13 +218,15 @@ public class autominer {
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
 	}
-	public static void type(String s) throws AWTException{
+
+	public static void type(String s) throws AWTException {
 		Robot rr = new Robot();
 
 		byte[] bytes = s.getBytes();
-		for(byte b : bytes){
+		for (byte b : bytes) {
 			int code = b;
-			if (code > 96 && code <123) code = code - 32;
+			if (code > 96 && code < 123)
+				code = code - 32;
 			try {
 				Thread.sleep(100);
 			} catch (InterruptedException e) {

@@ -9,10 +9,11 @@ public class client {
             BufferedReader reader = new BufferedReader(new InputStreamReader(s.getInputStream()));
             PrintWriter printer = new PrintWriter(s.getOutputStream());
             System.out.println(reader.readLine());
+            s.close();
         } catch (Exception e) {
             // TODO: handle exception
             e.printStackTrace();
-            
+
         }
     }
 }

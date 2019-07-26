@@ -10,6 +10,8 @@ public class server {
             BufferedReader reader = new BufferedReader(new InputStreamReader(client.getInputStream()));
             PrintWriter printer = new PrintWriter(client.getOutputStream());
             printer.write("hello\n");
+            printer.flush();
+            ss.close();
 
         } catch (Exception e) {
             // TODO: handle exception

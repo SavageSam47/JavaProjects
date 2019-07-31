@@ -1,1 +1,1 @@
-;
+ist.get(line)

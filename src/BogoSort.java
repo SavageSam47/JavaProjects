@@ -11,13 +11,8 @@ public class BogoSort {
         boolean sorted = false;
         while (sorted == false) {
             Collections.shuffle(list);
-            isCollectionSorted(list);
             System.out.println(list);
         }
         return list;
-    }
-
-    public static boolean isSorted() {
-
     }
 }

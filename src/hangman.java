@@ -16,7 +16,7 @@ public class hangman {
 			if (wordpicker == 0) {
 				word = "Discordbot";
 			} else if (wordpicker == 1) {
-				word = "Summertech";
+				word = "Summertssech";
 			} else if (wordpicker == 2) {
 				word = "russellisrude";
 			}

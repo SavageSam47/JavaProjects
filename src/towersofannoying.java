@@ -3,7 +3,7 @@ public class towersofannoying {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		// smallest disk- 0 medium - 1 large - 22
+		// smallest disk- 0 medium - 1 large - 2
 		oof(4,1,2,3);
 	}
 	public static void oof(int disk,int startpeg,int spare,int dest) {

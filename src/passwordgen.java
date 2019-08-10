@@ -1,3 +1,4 @@
+import java.security.SecureRandom;
 import java.util.*;
 
 public class passwordgen {
@@ -6,10 +7,11 @@ public class passwordgen {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		int length = scan.nextInt();
-		System.out.println(passwordgen(length));
+		System.out.println(passwordgenerator(length));
 	}
 	
-	static char[] passwordgen(int length){
+	private static String passwordgenerator(int length){
+		ArrayList<Character> list = new ArrayList<Character>();
 		System.out.println("Generating...");
 		System.out.println("Your new password is : ");
 		
@@ -20,15 +22,16 @@ public class passwordgen {
 		
 		String values = Capital_chars + Small_chars + numbers + symbols;
 		
-		Random rand = new Random();
-		
-		char[] password = new char[length];
-		
-		for (int x = 0; x<length; x++){
-			password[x] = 
-					values.charAt(rand.nextInt(values.length()));
+		SecureRandom rand = new SecureRandom();
+		for(int x=0;x<values.length();x++){
+			list.add(values.charAt(x));
 		}
-		return password;
+
+		String finalPass = "";
+		for (int x = 0; x<length; x++){
+			finalPass += list.get(rand.nextInt(values.length()));
+		}
+		return finalPass;
 	}
 
 }

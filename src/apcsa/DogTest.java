@@ -10,10 +10,14 @@ public class DogTest {
 		d.setName("Happy");
 		d.setAge(3);
 		d.setWeight(20.5);
+		d.speak();
 		
 		nd.setName("Sad");
 		nd.setAge(4);
 		nd.setWeight(24.7);
+		nd.speak();
+		
+		System.out.println(d);
 	}
 
 }

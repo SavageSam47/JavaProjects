@@ -13,6 +13,10 @@ public class Dog {
 		weight = nw;
 	}
 	
+	public Dog(String nn) {
+		name = nn;
+	}
+	
 	public Dog() {
 		
 	}
@@ -48,6 +52,4 @@ public class Dog {
 	public String toString() {
 		return "Name: " + name + "\nAge: " + age + "\nWeight: " + weight;
 	}
-	
-	
 }

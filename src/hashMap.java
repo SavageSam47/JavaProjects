@@ -1,6 +1,16 @@
 import java.util.ArrayList;
-
-public class hashMap {
+public class hashMap<Element>{
+	
+	private ArrayList list;
+	
+	public hashMap() {
+		list = new ArrayList();
+	}
+	public void hash(Element value) {
+		
+	}
+}
+/*public class hashMap {
     public ArrayList<Integer> keys;
     public ArrayList<Integer> values;
     private int size;
@@ -34,4 +44,4 @@ public class hashMap {
     public int get(int key) {
         return values.get(key);
     }
-}
+}*/

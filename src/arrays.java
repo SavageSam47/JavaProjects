@@ -12,7 +12,7 @@ public class arrays {
 		array[4] = "russellisbadatdogeball";
 		array[5] = "russellisreallybadatdogeball";
 		for (int x=0; x<6; x++) {
-		System.out.println(array[x]);
+			System.out.println(array[x]);
 		}
 
 	}

@@ -131,15 +131,15 @@ public class HackAssembler {
                         // TODO: Allow use of premade variables
                     } else {
                         // Specify C type instruction
-                        Boolean dest = false;
-                        Boolean jump = false;
-                        Boolean d1 = false;
-                        Boolean d2 = false;
-                        Boolean d3 = false;
-                        Boolean j1 = false;
-                        Boolean j2 = false;
-                        Boolean j3 = false;
-                        Boolean a = false;
+                        boolean dest = false;
+                        boolean jump = false;
+                        boolean d1 = false;
+                        boolean d2 = false;
+                        boolean d3 = false;
+                        boolean j1 = false;
+                        boolean j2 = false;
+                        boolean j3 = false;
+                        boolean a = false;
                         for (int x = 0; x < list.get(line).size(); x++) {
                             if (list.get(line).get(x) == '=') {
                                 // Looks for '='

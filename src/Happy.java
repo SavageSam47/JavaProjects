@@ -2,22 +2,24 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Happy {
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Hello mam");
-        createWindow(900, 500, frame);
-        createChild(250, 900, frame);
+    public static void main(String[] args) throws InterruptedException {
+        JFrame frame = new JFrame("T");
+        for (int i = 0; i < 1280; i+=200) {
+            for (int j = 0; j < 800; j+=20) {
+                createWindow(i, j, new JFrame("" + i+j));
+            }
+        }
+
+        //createChild(250, 900, frame);
 
     }
 
     public static void createWindow(int x, int y, JFrame frame) {
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(200,1);
         frame.setLocation(x, y);
-        frame.pack();
         frame.setVisible(true);
-        while (true) {
-
-        }
     }
 
     public static void createChild(int x, int y, JFrame frame) {

@@ -14,7 +14,6 @@ public class towersofannoying {
 			oof(disk-1, startpeg, dest, spare);
 			System.out.println("Move disk " + disk + " from peg " + startpeg + " to peg " + dest);
 			oof(disk-1, spare, startpeg, dest);
-
 		}
 	}
 }

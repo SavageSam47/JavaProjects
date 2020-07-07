@@ -1,10 +1,10 @@
 package ArrayLists;
-public class ArrayList {
+public class myArrayList {
 	
 	static String[] array;
 	static String[] temp;
 	
-	public ArrayList() {
+	public myArrayList() {
 		array = new String[0];
 		
 	}

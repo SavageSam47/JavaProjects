@@ -10,7 +10,7 @@ public class Stack<Element>{
     public Element pop(){
         return list.removeFirst();
     }
-    public Element Read(){
+    public Element peek(){
         return list.getIndex(0);
     }
     public int size(){

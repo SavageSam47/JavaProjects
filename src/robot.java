@@ -10,7 +10,7 @@ public class robot {
 	public static void main(String[] args) throws IOException, AWTException, InterruptedException {
 		// TODO Auto-generated method stub
 		Runtime run = Runtime.getRuntime();
-		run.exec("gedit");
+		run.exec("nano test");
 		Robot r = new Robot();
 		Thread.sleep(500);
 		r.keyPress(KeyEvent.VK_H);

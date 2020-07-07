@@ -1,7 +1,7 @@
 
 public class HashMapNode<Element> {
-	private Element key;
-	private Element value;
+	public Element key;
+	public Element value;
 	
 	public HashMapNode(Element key, Element value) {
 		this.key = key;
@@ -11,16 +11,5 @@ public class HashMapNode<Element> {
 		this.key = null;
 		this.value = null;
 	}
-	public Element getValue() {
-		return value;
-	}
-	public Element getKey() {
-		return key;
-	}
-	public void setValue(Element value) {
-		this.value=value;
-	}
-	public void setKey(Element key) {
-		this.key=key;
-	}
+
 }

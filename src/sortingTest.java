@@ -9,6 +9,6 @@ public class sortingTest {
         list.add(6);
         list.add(2);
         list.add(7);
-        System.out.println(sort.sort(list));
+
     }
 }

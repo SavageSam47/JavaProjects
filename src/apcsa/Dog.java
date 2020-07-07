@@ -2,23 +2,29 @@ package apcsa;
 
 
 public class Dog {
+	private static int globalObjectCount = 1;
+	private static final double CONVERSION = 2.2;
 
 	private String name;
 	private int age;
 	private double weight;
-	
+	private int id;
+
+
 	public Dog(String nn, int na, double nw) {
 		name = nn;
 		age = na;
 		weight = nw;
+		id = globalObjectCount++;
 	}
 	
 	public Dog(String nn) {
 		name = nn;
+		id = globalObjectCount++;
 	}
 	
 	public Dog() {
-		
+		id = globalObjectCount++;
 	}
 	
 	public String getName() {
@@ -43,6 +49,14 @@ public class Dog {
 	
 	public void setWeight(double nn) {
 		weight = nn;
+	}
+
+	public int getId(){
+		return id;
+	}
+
+	public static double convertToLBS(double kg){
+		return kg*CONVERSION;
 	}
 	
 	public void speak() {

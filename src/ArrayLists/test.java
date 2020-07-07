@@ -1,5 +1,7 @@
 package ArrayLists;
 
+import java.util.ArrayList;
+
 public class test {
 
 	public static void main(String[] args) {
@@ -10,11 +12,11 @@ public class test {
 		array.add("ghosts");
 		array.add("Zombies");
 		
-		array.print();
+
 		
 		array.remove("teeth");
 		
-		array.print();
+
 		
 		System.out.println(array.isEmpty());
 		

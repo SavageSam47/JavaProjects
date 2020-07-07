@@ -3,8 +3,7 @@ public class recursion {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(fibonacci(50));
-
+		System.out.println(factorial(5));
 	}
 
 	public static int mult(int num1, int num2) {
@@ -33,7 +32,7 @@ public class recursion {
 		}
 	}
 	public static long fibonacci(long n)  {
-	    if(n <=1)
+	    if(n<=1)
 	        return n;
 	   else
 	      return fibonacci(n - 1) + fibonacci(n - 2);

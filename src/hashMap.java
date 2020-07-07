@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 public class hashMap<Element>{
 	
-	private ArrayList list;
+	private ArrayList<HashMapNode<Element>> list;
 	
 	public hashMap() {
-		list = new ArrayList();
+		list = new ArrayList<>();
 	}
 	public void hash(Element value) {
 		

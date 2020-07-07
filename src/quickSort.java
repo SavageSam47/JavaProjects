@@ -1,46 +1,40 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 public class quickSort {
-    ArrayList<Integer> result = new ArrayList<Integer>();
-
-    public quickSort() {
-
+    public static void main(String[] args) {
+        ArrayList<Integer> arr = new ArrayList<Integer>();
+        Random rand = new Random();
+        for (int i = 0; i < 100; i++) {
+            arr.add(rand.nextInt(100));
+        }
+        System.out.println(arr);
+        sort(arr, 0, arr.size()-1);
+        System.out.println(arr);
     }
 
-    public ArrayList<Integer> sort(ArrayList<Integer> list) {
-        ArrayList<Integer> right = new ArrayList<Integer>();
-        ArrayList<Integer> left = new ArrayList<Integer>();
-        if (list.size() == 1) {
-            return result;
-        } else if (list.size() == 0) {
-            return result;
-        } else {
 
-            int pivot = list.get(list.size() - 1);
-            for (int x = 0; x < list.size() - 1; x++) {
+    public static void sort(ArrayList<Integer> list, int low, int high) {
+        if(low<high){
+            int pi = partition(list, low, high);
 
-                if (list.get(x) > pivot) {
-                    right.add(list.get(x));
-                    list.remove(x);
-                    x--;
-
-                } else if (list.get(x) < pivot) {
-                    left.add(list.get(x));
-                    list.remove(x);
-                    x--;
-
-                }
-
-            }
-            sort(left);
-            sort(right);
-            // result.addAll(left + pivot + right);
-            result.addAll(left);
-            result.add(pivot);
-            result.addAll(right);
-
+            sort(list, low, pi-1);
+            sort(list, pi + 1, high);
         }
-        return result;
+    }
+
+    public static int partition(ArrayList<Integer> list, int low, int high){
+        int pivot = list.get(high);
+        int i = (low-1);
+        for (int j = low; j <= high-1 ; j++) {
+            if(list.get(j) < pivot){
+                i++;
+                Collections.swap(list, i, j);
+            }
+        }
+        Collections.swap(list, i+1, high);
+        return (i+1);
     }
     
 }
